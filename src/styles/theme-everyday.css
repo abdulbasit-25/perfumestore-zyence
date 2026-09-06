@@ -347,11 +347,11 @@
     border-color: color-mix(in oklab, var(--color-accent) 48%, transparent);
     box-shadow: var(--shadow-card-hover);
   }
-  .atelier-stamp {
+  .zyence-stamp {
     animation: spin 18s linear infinite;
   }
   .marquee-track {
-    animation: sorrel-marquee 22s linear infinite;
+    animation: zyence-marquee 22s linear infinite;
   }
   .product-card-rise[data-rise-delay="0"] {
     animation-delay: 0ms;
@@ -446,7 +446,7 @@
     transform: none;
   }
 }
-@keyframes sorrel-marquee {
+@keyframes zyence-marquee {
   from {
     transform: translateX(0);
   }
