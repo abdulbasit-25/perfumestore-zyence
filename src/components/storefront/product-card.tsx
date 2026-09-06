@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Eye, Heart, ShoppingBag } from "lucide-react";
+import type { MouseEvent } from "react";
 import { cn, currency } from "@/lib/utils";
 
 type ProductCardData = {
@@ -30,7 +31,7 @@ export function ProductCard({
 
   // Buttons live inside the <Link>; preventDefault + stopPropagation stop
   // them from triggering navigation to the product page.
-  const stopAndRun = (fn?: (p: ProductCardData) => void) => (e: React.MouseEvent) => {
+  const stopAndRun = (fn?: (p: ProductCardData) => void) => (e: MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     fn?.(product);
@@ -66,8 +67,9 @@ export function ProductCard({
           </span>
         )}
 
-        {/* Wishlist + quick view — top right */}
-        <div className="absolute top-3 right-3 z-10 flex flex-col gap-2 opacity-100 transition-opacity duration-200 md:opacity-0 md:group-hover:opacity-100">
+        {/* Wishlist + quick view — top right. Visible on touch always; on desktop, on
+            hover OR keyboard focus, so tabbing to these buttons doesn't land on something invisible. */}
+        <div className="absolute top-3 right-3 z-10 flex flex-col gap-2 opacity-100 transition-opacity duration-200 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100">
           <button
             type="button"
             onClick={stopAndRun(onToggleWishlist)}
@@ -89,9 +91,9 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Add to cart — slides up from bottom on hover (desktop), always visible on touch */}
+        {/* Add to cart — slides up from bottom on hover or keyboard focus (desktop), always visible on touch */}
         {!outOfStock && onAddToCart && (
-          <div className="absolute inset-x-2 bottom-2 z-10 translate-y-0 opacity-100 transition-all duration-200 md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+          <div className="absolute inset-x-2 bottom-2 z-10 translate-y-0 opacity-100 transition-all duration-200 md:translate-y-3 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100">
             <button
               type="button"
               onClick={stopAndRun(onAddToCart)}
@@ -114,7 +116,7 @@ export function ProductCard({
 
 export function ProductCardSkeleton() {
   return (
-    <div>
+    <div aria-hidden="true">
       <div className="aspect-[4/5] animate-pulse bg-surface-2" />
       <div className="mt-3 h-4 w-2/3 animate-pulse bg-surface-2" />
     </div>
