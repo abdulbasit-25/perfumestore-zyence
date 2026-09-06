@@ -52,7 +52,7 @@ Decide:
 - Return policy
 - Tax rules
 
-For Sorrel:
+For Zyence:
 
 ```text
 Store Type: D2C E-Commerce
