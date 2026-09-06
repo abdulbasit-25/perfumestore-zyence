@@ -31,19 +31,23 @@ describe("chatbot logic", () => {
   it("finds relevant products by query and price", () => {
     const testProducts = [
       {
-        id: "test-shirt",
-        name: "Test Linen Shirt",
-        slug: "test-linen-shirt",
-        description: "A test shirt for chatbot matching",
+        id: "test-fragrance",
+        name: "Test Amber Fragrance",
+        slug: "test-amber-fragrance",
+        description: "A test fragrance for chatbot matching",
         price: 80,
         sku: "TEST-001",
         stock: 4,
         categoryId: "test-category",
-        categorySlug: "apparel",
+        categorySlug: "eau-de-parfum",
         images: [
-          { url: "https://example.com/test-shirt.jpg", publicId: "test-shirt", alt: "Test shirt" },
+          {
+            url: "https://example.com/test-fragrance.jpg",
+            publicId: "test-fragrance",
+            alt: "Test fragrance",
+          },
         ],
-        image: "https://example.com/test-shirt.jpg",
+        image: "https://example.com/test-fragrance.jpg",
         isActive: true,
         rating: 4,
         reviewCount: 0,
@@ -51,8 +55,10 @@ describe("chatbot logic", () => {
         updatedAt: "2026-01-01",
       },
     ];
-    const shirtMatches = findProductMatches("show me shirts", 3, testProducts);
-    expect(shirtMatches.some((product) => product.name.toLowerCase().includes("shirt"))).toBe(true);
+    const fragranceMatches = findProductMatches("show me perfume", 3, testProducts);
+    expect(
+      fragranceMatches.some((product) => product.name.toLowerCase().includes("fragrance")),
+    ).toBe(true);
 
     const cheapMatches = findProductMatches("products under 100", 3, testProducts);
     expect(cheapMatches.length).toBeGreaterThan(0);
