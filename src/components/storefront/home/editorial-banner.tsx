@@ -41,7 +41,7 @@ export function EditorialBanner() {
         <div className="relative mx-auto mb-8 h-20 w-20 md:mb-10">
           <svg
             viewBox="0 0 100 100"
-            className="atelier-stamp h-full w-full text-olive/70 motion-safe:animate-[spin_24s_linear_infinite]"
+            className="zyence-stamp h-full w-full text-olive/70 motion-safe:animate-[spin_24s_linear_infinite]"
           >
             <defs>
               <path id="stampCircle" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
