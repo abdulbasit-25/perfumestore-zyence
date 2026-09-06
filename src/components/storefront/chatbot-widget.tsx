@@ -27,7 +27,7 @@ type ChatMessage = {
   }>;
 };
 
-const STORAGE_KEY = "sorrel-chatbot-history";
+const STORAGE_KEY = "zyence-chatbot-history";
 const MIN_TYPING_MS = 450;
 const MAX_TYPING_MS = 1100;
 
