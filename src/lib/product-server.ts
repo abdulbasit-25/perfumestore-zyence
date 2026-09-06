@@ -9,6 +9,20 @@ const imageSchema = z.object({
   alt: z.string().min(1),
 });
 
+const fragranceSchema = z.object({
+  concentration: z.string().trim().min(1).optional(),
+  volumeMl: z.number().positive().optional(),
+  longevity: z.string().trim().min(1).optional(),
+  sillage: z.string().trim().min(1).optional(),
+  notes: z
+    .object({
+      top: z.array(z.string().trim().min(1)),
+      heart: z.array(z.string().trim().min(1)),
+      base: z.array(z.string().trim().min(1)),
+    })
+    .optional(),
+});
+
 const productSchema = z.object({
   name: z.string().trim().min(1),
   slug: z
@@ -24,6 +38,7 @@ const productSchema = z.object({
   isActive: z.boolean().optional(),
   rating: z.number().finite().min(0).max(5).optional(),
   reviewCount: z.number().int().nonnegative().optional(),
+  fragrance: fragranceSchema.optional(),
 });
 
 type ProductFilters = {
@@ -253,6 +268,7 @@ function mongoToProduct(doc: Record<string, unknown>): Product {
     isActive: doc["isActive"] !== false,
     rating: Number(doc["rating"] ?? 0),
     reviewCount: Number(doc["reviewCount"] ?? 0),
+    fragrance: doc["fragrance"] as Product["fragrance"],
     createdAt: createdAt.toISOString(),
     updatedAt: updatedAt.toISOString(),
   };
