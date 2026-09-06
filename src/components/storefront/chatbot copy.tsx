@@ -26,7 +26,7 @@ type ChatMessage = {
   }>;
 };
 
-const STORAGE_KEY = "sorrel-chatbot-history";
+const STORAGE_KEY = "zyence-chatbot-history";
 
 function createBotMessage(
   text: string,
