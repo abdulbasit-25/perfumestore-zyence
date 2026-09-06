@@ -4,11 +4,11 @@ import { LegalPage } from "@/components/storefront/legal-page";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Sorrel" },
+      { title: "Privacy Policy — Zyence" },
       {
         name: "description",
         content:
-          "Learn how Sorrel handles customer information, cookies, payments, account details, and customer rights.",
+          "Learn how Zyence handles customer information, cookies, payments, account details, and customer rights.",
       },
     ],
   }),
