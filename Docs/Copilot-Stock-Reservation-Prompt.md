@@ -1,6 +1,6 @@
 # Implement Atomic Stock Reservation / Decrement During Checkout
 
-You are working on the **Sorrel E-Commerce Store** using:
+You are working on the **Zyence E-Commerce Store** using:
 
 - TanStack Start
 - React + TypeScript
@@ -128,14 +128,14 @@ Conceptually:
 await products.updateOne(
   {
     _id: productId,
-    stock: { $gte: quantity }
+    stock: { $gte: quantity },
   },
   {
     $inc: {
-      stock: -quantity
-    }
-  }
-)
+      stock: -quantity,
+    },
+  },
+);
 ```
 
 The important condition is:
@@ -259,7 +259,9 @@ must be enforced server-side.
 Never perform:
 
 ```ts
-$inc: { stock: -quantity }
+$inc: {
+  stock: -quantity;
+}
 ```
 
 without a stock condition.
@@ -442,13 +444,7 @@ When creating the order, store the product information needed for historical acc
 
 ```ts
 {
-  productId,
-  name,
-  slug,
-  sku,
-  price,
-  quantity,
-  image
+  (productId, name, slug, sku, price, quantity, image);
 }
 ```
 
