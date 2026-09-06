@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils";
 
 const nav = [
   { to: "/shop", label: "Shop" },
-  { to: "/shop", label: "Apparel", search: { category: "apparel" } },
-  { to: "/shop", label: "Ceramics", search: { category: "ceramics" } },
-  { to: "/about", label: "Atelier" },
+  { to: "/shop", label: "Eau de Parfum", search: { category: "eau-de-parfum" } },
+  { to: "/shop", label: "Home Fragrance", search: { category: "home-fragrance" } },
+  { to: "/about", label: "Studio" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -79,7 +79,7 @@ export function SiteHeader() {
           className="font-display text-2xl tracking-tight text-foreground transition-colors hover:text-olive"
           onClick={() => setOpen(false)}
         >
-          Sorrel
+          Zyence
         </Link>
 
         <nav className="ml-6 hidden items-center gap-7 md:flex">
