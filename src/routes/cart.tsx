@@ -10,12 +10,12 @@ import { currency, cn } from "@/lib/utils";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "Your bag — Sorrel" },
+      { title: "Your bag — Zyence" },
       {
         name: "description",
         content: "Review the pieces in your bag before placing a pay-on-delivery order.",
       },
-      { property: "og:title", content: "Your bag — Sorrel" },
+      { property: "og:title", content: "Your bag — Zyence" },
       {
         property: "og:description",
         content: "Review your bag and check out with cash on delivery.",
