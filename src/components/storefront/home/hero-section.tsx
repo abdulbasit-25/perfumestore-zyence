@@ -18,7 +18,7 @@ export function HeroSection() {
         <div className="section-shell relative flex gap-6 pb-16 pt-8 md:pt-12">
           <div className="hidden shrink-0 md:flex md:w-10 md:items-start md:justify-center">
             <span className="label-caps origin-top-left translate-y-full -rotate-90 whitespace-nowrap text-olive">
-              Spring Collection — 2026 — Sorrel Atelier
+              New Collection — 2026 — Zyence
             </span>
           </div>
 
@@ -26,27 +26,27 @@ export function HeroSection() {
             <div className="rise md:col-span-5 md:pt-16">
               <p className="label-caps flex items-center gap-2 text-olive md:hidden">
                 <span className="h-px w-6 bg-olive" />
-                Spring collection · 2026
+                New scents · 2026
               </p>
               <h1 className="display-xl mt-4 md:mt-6">
-                Made slowly,
+                Scent,
                 <br />
-                <em className="italic">worn</em> daily.
+                <em className="italic">engineered</em> precisely.
               </h1>
               <p className="mt-6 max-w-sm text-base text-muted-foreground md:mt-8">
-                Washed linen, hand-thrown stoneware and quiet objects for the home. Made in small
-                runs, delivered to your door, paid when it arrives.
+                Small-batch composed fragrances with precision blending. Eau de parfum, attars, and
+                curated home scents. Inspect before you pay.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-10">
                 <Link
                   to="/shop"
                   className="label-caps group inline-flex items-center gap-2 bg-primary px-7 py-4 text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-olive hover:text-accent-foreground"
                 >
-                  Shop the collection
+                  Explore the collection
                   <ArrowUpRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
                 </Link>
                 <Link to="/about" className="label-caps link-underline text-muted-foreground">
-                  Inside the atelier
+                  About the studio
                 </Link>
               </div>
             </div>
@@ -59,7 +59,7 @@ export function HeroSection() {
               <div className="media-zoom relative overflow-hidden rounded-sm border border-border/70 bg-surface shadow-[var(--shadow-media)]">
                 <img
                   src={heroImage}
-                  alt="Model wearing an oversized oatmeal linen shirt against a warm plaster wall"
+                  alt="Zyence fragrance collection: luxury eau de parfum bottles in dark glass with gold accents"
                   width={1920}
                   height={1200}
                   className="aspect-[4/3] w-full rounded-sm object-cover md:aspect-[5/6]"
