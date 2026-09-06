@@ -2,11 +2,11 @@ Do not create mock/demo data and do not duplicate existing business logic. Reuse
 
 Never import Node-only modules such as mongodb, stream, fs, crypto, or other server-only dependencies into browser/client modules at module scope. Keep server-only dependencies behind server-function boundaries. Verify the production browser bundle after each phase.
 
-# Sorrel Ops V2 - Production Operations Modules
+# Zyence Studio V2 - Production Operations Modules
 
 ## Implementation Prompt
 
-Extend the existing Sorrel e-commerce application into a production-ready operations dashboard.
+Extend the existing Zyence e-commerce application into a production-ready operations dashboard.
 
 ## Existing Functionality - Do Not Rebuild
 
