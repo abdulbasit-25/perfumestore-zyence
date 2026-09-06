@@ -28,7 +28,7 @@ const blank: Product = {
   categoryId: "",
   images: [],
   image: "",
-  categorySlug: "apparel",
+  categorySlug: "eau-de-parfum",
   stock: 0,
   sku: "",
   isActive: true,
