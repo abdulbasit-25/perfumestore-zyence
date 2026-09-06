@@ -1,6 +1,24 @@
+/// <reference types="node" />
+import * as fs from "fs";
+import * as path from "path";
 import { getMongoDb, closeMongoDb } from "../src/lib/mongodb";
 import { hashPassword } from "../src/lib/auth";
 import { normalizeEmail } from "../src/lib/auth-validation";
+
+const envPath = path.resolve(process.cwd(), ".env");
+if (fs.existsSync(envPath)) {
+  const envContent = fs.readFileSync(envPath, "utf-8");
+  for (const line of envContent.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const separator = trimmed.indexOf("=");
+    if (separator > 0) {
+      const key = trimmed.slice(0, separator).trim();
+      const value = trimmed.slice(separator + 1).trim();
+      if (!process.env[key]) process.env[key] = value;
+    }
+  }
+}
 
 async function seedUsers() {
   console.log("Starting user seed...");
