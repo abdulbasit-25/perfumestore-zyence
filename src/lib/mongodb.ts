@@ -28,7 +28,7 @@ export async function getMongoDb(): Promise<Db> {
 
     await client.connect();
     cachedClient = client;
-    cachedDb = client.db("sorrel");
+    cachedDb = client.db("zyence");
 
     console.log("Connected to MongoDB");
     return cachedDb;
