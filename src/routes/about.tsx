@@ -5,13 +5,13 @@ import { ArrowRight, HeartHandshake, Leaf, ShieldCheck, Sparkles, Star } from "l
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Sorrel" },
+      { title: "About Us — Zyence" },
       {
         name: "description",
         content:
-          "Learn about Sorrel, our mission, our values, and why customers choose us for considered home goods and everyday essentials.",
+          "Learn about Zyence, our mission, our values, and why fragrance lovers choose our composed scents.",
       },
-      { property: "og:title", content: "About Us — Sorrel" },
+      { property: "og:title", content: "About Us — Zyence" },
       {
         property: "og:description",
         content:
@@ -65,10 +65,10 @@ function About() {
           <div className="mt-12 grid gap-10 md:grid-cols-12 md:items-center">
             <div className="space-y-5 text-base leading-7 text-muted-foreground md:col-span-6">
               <p>
-                Sorrel is an independent store focused on everyday goods that are useful, beautiful,
-                and easy to live with. We curate products with intention, balancing quality and
-                simplicity so customers can build a home or wardrobe that feels considered rather
-                than cluttered.
+                Zyence is an independent fragrance house focused on scents that are precise,
+                beautiful, and easy to live with. We curate products with intention, balancing
+                quality and simplicity so customers can build a home or wardrobe that feels
+                considered rather than cluttered.
               </p>
               <p>
                 Our brand stands for thoughtful design, honest materials, and a slower rhythm of
@@ -144,7 +144,7 @@ function About() {
                 supportive experience over a rushed one.
               </p>
               <p>
-                Customers return to Sorrel because they know they will find products they can rely
+                Customers return to Zyence because they know they will find fragrances they can rely
                 on and a store that values their time, questions, and confidence. We are committed
                 to being a dependable place to shop for the pieces that make home and routine feel a
                 little more considered.
