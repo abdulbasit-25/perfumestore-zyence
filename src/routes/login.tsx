@@ -86,13 +86,13 @@ export const Route = createFileRoute("/login")({
   },
   head: () => ({
     meta: [
-      { title: "Sign in — Sorrel" },
+      { title: "Sign in — Zyence" },
       {
         name: "description",
-        content: "Sign in to track your Sorrel orders, addresses and order history.",
+        content: "Sign in to track your Zyence orders, addresses and order history.",
       },
-      { property: "og:title", content: "Sign in — Sorrel" },
-      { property: "og:description", content: "Access your Sorrel account and order history." },
+      { property: "og:title", content: "Sign in — Zyence" },
+      { property: "og:description", content: "Access your Zyence account and order history." },
     ],
   }),
   component: LoginPage,
@@ -258,7 +258,7 @@ function LoginPage() {
         <div className="max-w-md">
           <p className="label-caps text-olive">Account</p>
           <h1 className="display-xl mt-6">
-            {mode === "signin" ? "Welcome back." : "Join the atelier."}
+            {mode === "signin" ? "Welcome back." : "Join the studio."}
           </h1>
           <p className="mt-8 text-muted-foreground">
             Your account keeps order history, saved addresses and delivery tracking in one place.
