@@ -234,7 +234,7 @@ async function seedZyenceProducts() {
     };
 
     // Seed products
-    let createdCount = 0;
+    let processedCount = 0;
     for (const product of zyenceProducts) {
       // Check if product already exists
       const existing = await productsCollection.findOne({ sku: product.sku });
@@ -264,11 +264,11 @@ async function seedZyenceProducts() {
         { $set: document },
         { upsert: true },
       );
-      createdCount++;
+      processedCount++;
       console.log(`${existing ? "✓ Updated" : "✓ Created"}: ${product.name}`);
     }
 
-    console.log(`\n✓ Zyence seed complete: ${createdCount} products created`);
+    console.log(`\n✓ Zyence seed complete: ${processedCount} products processed`);
   } catch (error) {
     console.error("Error seeding Zyence products:", error);
     process.exit(1);
