@@ -58,7 +58,7 @@ function ContactPage() {
             <div>
               <p className="label-caps text-muted-foreground">Studio</p>
               <p className="mt-2 text-lg text-foreground">
-                1234 Sorrel Street
+                1234 Zyence Avenue
                 <br />
                 Earth City, EC 12345
               </p>
