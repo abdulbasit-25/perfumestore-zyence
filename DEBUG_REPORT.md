@@ -1,6 +1,6 @@
 # Debug Report
 
-**Project:** E-Commerce Store / Sorrel
+**Project:** Zyence E-Commerce Store
 **Captured:** 2026-09-06
 **Repository:** `https://github.com/abdulbasit-25/E-Comerce-Store.git`
 **Deployment observed:** `https://e-comerce-store-two.vercel.app/`
