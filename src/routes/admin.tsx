@@ -6,10 +6,10 @@ import { useAuth, useHydrated } from "@/lib/store";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Sorrel Ops — Admin" },
-      { name: "description", content: "Internal Sorrel operations dashboard." },
+      { title: "Zyence Studio — Admin" },
+      { name: "description", content: "Internal Zyence operations dashboard." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "Sorrel Ops" },
+      { property: "og:title", content: "Zyence Studio" },
       { property: "og:description", content: "Internal operations dashboard." },
     ],
   }),
