@@ -2,7 +2,7 @@
 
 **Audit Date:** September 4, 2026
 **Audited By:** Code Analysis  
-**Project:** Sorrel E-Commerce Store (TanStack Start + React + MongoDB)
+**Project:** Zyence E-Commerce Store (TanStack Start + React + MongoDB)
 
 ---
 
@@ -53,8 +53,8 @@
   - Demo accounts exist in database
   - Seed script: `scripts/seed-users.ts`
 - **Demo Accounts:**
-  - Admin: admin@sorrel.local / Admin@12345
-  - Customer: customer@sorrel.local / Customer@12345
+  - Admin: admin@zyence.local / Admin@12345
+  - Customer: customer@zyence.local / Customer@12345
 - **Usage:** Run `npm run seed:users` to populate (requires MONGODB_URI)
 
 ### ✅ Frontend UI & Components
@@ -489,13 +489,13 @@
 - `JWT_SECRET` defaults to "your-secret-key-change-in-production" (src/lib/auth.ts line 11)
 - Shipping cost: always $12 or free (hardcoded in cartDetail function)
 - Order ID prefix: always "SRL-" (src/routes/checkout.tsx line 51)
-- Database name: hardcoded to "sorrel" (src/lib/mongodb.ts line 21)
+- Database name: hardcoded to "zyence" (src/lib/mongodb.ts line 21)
 - Payment method: always "COD" for all orders
-- Store email in chatbot: hardcoded to "hello@sorrelgoods.com"
+- Store email in chatbot: hardcoded to "hello@zyence.com"
 
 ### ❌ Temporary/Test Data
 
-- Seed script creates demo users only (admin@sorrel.local, customer@sorrel.local)
+- Seed script creates demo users only (admin@zyence.local, customer@zyence.local)
 - Mock product images used as placeholder assets
 - Mock order statuses for demonstration
 
