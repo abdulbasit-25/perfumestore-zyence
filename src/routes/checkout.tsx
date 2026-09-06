@@ -14,12 +14,12 @@ import { currency } from "@/lib/utils";
 export const Route = createFileRoute("/checkout")({
   head: () => ({
     meta: [
-      { title: "Checkout — Sorrel" },
+      { title: "Checkout — Zyence" },
       {
         name: "description",
         content: "Confirm your shipping details and place a cash-on-delivery order.",
       },
-      { property: "og:title", content: "Checkout — Sorrel" },
+      { property: "og:title", content: "Checkout — Zyence" },
       { property: "og:description", content: "Place your order and pay the courier on delivery." },
     ],
   }),
