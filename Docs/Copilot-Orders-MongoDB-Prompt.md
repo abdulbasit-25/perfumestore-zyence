@@ -1,6 +1,6 @@
-# Move Orders from Zustand to MongoDB — Sorrel E-Commerce Store
+# Move Orders from Zustand to MongoDB — Zyence E-Commerce Store
 
-You are working on the **Sorrel E-Commerce Store**, built with:
+You are working on the **Zyence E-Commerce Store**, built with:
 
 - TanStack Start
 - React + TypeScript
@@ -279,7 +279,7 @@ Replace the current frontend-only order creation behavior.
 
 The server should generate the order number.
 
-Preserve the existing Sorrel convention:
+Preserve the existing Zyence convention:
 
 ```text
 SRL-XXXX
@@ -538,7 +538,7 @@ Can:
 Do NOT trust:
 
 ```ts
-user.role
+user.role;
 ```
 
 from Zustand/localStorage.
@@ -676,7 +676,7 @@ Maintain strict typing.
 Do not introduce:
 
 ```ts
-any
+any;
 ```
 
 unless absolutely unavoidable.
