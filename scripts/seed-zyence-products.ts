@@ -35,6 +35,13 @@ const zyenceProducts = [
     sku: "ZYE-EDP-001",
     isActive: true,
     rating: 4.8,
+    fragrance: {
+      concentration: "EDP",
+      volumeMl: 50,
+      longevity: "8–10 hours",
+      sillage: "Moderate-heavy",
+      notes: { top: ["bergamot", "pink pepper"], heart: ["oud", "rose"], base: ["amber", "musk"] },
+    },
     createdAt: "2026-02-11",
   },
   {
@@ -43,11 +50,18 @@ const zyenceProducts = [
     description:
       "Bulgarian rose macerated in golden carrier oil with undertones of saffron and vetiver. A luxe, concentrated oil fragrance. 5ml.",
     price: 78.0,
-    categorySlug: "accessories",
+    categorySlug: "attars-oils",
     stock: 24,
     sku: "ZYE-ATT-001",
     isActive: true,
     rating: 4.9,
+    fragrance: {
+      concentration: "Attar",
+      volumeMl: 5,
+      longevity: "10+ hours",
+      sillage: "Close",
+      notes: { top: ["saffron"], heart: ["rose"], base: ["vetiver", "golden oil"] },
+    },
     createdAt: "2026-03-02",
   },
   {
@@ -61,6 +75,13 @@ const zyenceProducts = [
     sku: "ZYE-EDP-002",
     isActive: true,
     rating: 4.7,
+    fragrance: {
+      concentration: "EDP",
+      volumeMl: 50,
+      longevity: "6–8 hours",
+      sillage: "Moderate",
+      notes: { top: ["fig leaf"], heart: ["vetiver"], base: ["sandalwood"] },
+    },
     createdAt: "2026-01-19",
   },
   {
@@ -74,6 +95,13 @@ const zyenceProducts = [
     sku: "ZYE-HOM-001",
     isActive: true,
     rating: 4.6,
+    fragrance: {
+      concentration: "Home fragrance",
+      volumeMl: 100,
+      longevity: "Up to 12 weeks",
+      sillage: "Ambient",
+      notes: { top: ["vanilla"], heart: ["cedar"], base: ["sandalwood"] },
+    },
     createdAt: "2026-02-27",
   },
   {
@@ -87,6 +115,13 @@ const zyenceProducts = [
     sku: "ZYE-SET-001",
     isActive: true,
     rating: 4.8,
+    fragrance: {
+      concentration: "Discovery set",
+      volumeMl: 25,
+      longevity: "Varies by composition",
+      sillage: "Varies by composition",
+      notes: { top: ["bergamot"], heart: ["rose", "fig"], base: ["oud", "musk"] },
+    },
     createdAt: "2026-03-14",
   },
   {
@@ -100,6 +135,13 @@ const zyenceProducts = [
     sku: "ZYE-EDP-003",
     isActive: true,
     rating: 4.8,
+    fragrance: {
+      concentration: "EDP",
+      volumeMl: 50,
+      longevity: "6–8 hours",
+      sillage: "Moderate",
+      notes: { top: ["bergamot"], heart: ["vetiver"], base: ["white musk"] },
+    },
     createdAt: "2026-01-08",
   },
   {
@@ -113,6 +155,13 @@ const zyenceProducts = [
     sku: "ZYE-EDP-004",
     isActive: true,
     rating: 4.9,
+    fragrance: {
+      concentration: "EDP",
+      volumeMl: 50,
+      longevity: "8–10 hours",
+      sillage: "Heavy",
+      notes: { top: ["oud"], heart: ["leather accord"], base: ["warm woods"] },
+    },
     createdAt: "2026-02-05",
   },
   {
@@ -121,11 +170,18 @@ const zyenceProducts = [
     description:
       "Pure lavender, chamomile, and cedarwood in a premium carrier oil. Roll onto pulse points for a restful evening. 10ml.",
     price: 38.0,
-    categorySlug: "accessories",
+    categorySlug: "attars-oils",
     stock: 30,
     sku: "ZYE-ACC-001",
     isActive: true,
     rating: 4.7,
+    fragrance: {
+      concentration: "Perfume oil",
+      volumeMl: 10,
+      longevity: "6–8 hours",
+      sillage: "Close",
+      notes: { top: ["lavender"], heart: ["chamomile"], base: ["cedarwood"] },
+    },
     createdAt: "2026-03-10",
   },
 ];
@@ -147,6 +203,7 @@ async function seedZyenceProducts() {
     const categoryIds = new Map<string, unknown>();
     const zyenceCategories = [
       ["eau-de-parfum", "Eau de Parfum"],
+      ["attars-oils", "Attars / Oils"],
       ["home-fragrance", "Home Fragrance"],
       ["accessories", "Accessories"],
       ["gift-sets", "Gift Sets"],
@@ -200,6 +257,7 @@ async function seedZyenceProducts() {
           isActive: product.isActive,
           rating: product.rating,
           reviewCount: 0,
+          fragrance: product.fragrance,
           createdAt: new Date(product.createdAt),
           updatedAt: now,
         };
