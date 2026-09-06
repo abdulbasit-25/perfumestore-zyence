@@ -1,23 +1,23 @@
-import { Sprout, Scissors, Package, Ship } from "lucide-react";
+import { Sparkles, Pipette, FlaskConical, Ship } from "lucide-react";
 
 const process = [
   {
-    icon: Sprout,
+    icon: Sparkles,
     step: "01",
-    title: "Source",
-    body: "Flax and wool bought direct from small growers and a family mill.",
+    title: "Compose",
+    body: "Perfumers select raw materials and essential oils for a clear scent profile.",
   },
   {
-    icon: Scissors,
+    icon: Pipette,
     step: "02",
-    title: "Make",
-    body: "Cut, thrown or woven by hand, one short run at a time.",
+    title: "Blend",
+    body: "Measured oils are blended and macerated in small batches for depth and balance.",
   },
   {
-    icon: Package,
+    icon: FlaskConical,
     step: "03",
-    title: "Finish",
-    body: "Washed, checked and packed in the same room it was made.",
+    title: "Bottle",
+    body: "Each composition is decanted into dark glass, inspected, and prepared with care.",
   },
   {
     icon: Ship,
