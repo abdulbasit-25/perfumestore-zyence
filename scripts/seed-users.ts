@@ -1,5 +1,6 @@
 import { getMongoDb, closeMongoDb } from "../src/lib/mongodb";
-import { hashPassword, normalizeEmail } from "../src/lib/auth";
+import { hashPassword } from "../src/lib/auth";
+import { normalizeEmail } from "../src/lib/auth-validation";
 
 async function seedUsers() {
   console.log("Starting user seed...");

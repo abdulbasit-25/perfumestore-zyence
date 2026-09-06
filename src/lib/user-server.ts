@@ -70,7 +70,8 @@ export const createManagedUser = createServerFn({ method: "POST" })
   )
   .handler(async ({ data }) => {
     const { canAssignRole } = await import("@/lib/permissions");
-    const { hashPassword, isValidEmail, normalizeEmail } = await import("@/lib/auth");
+    const { hashPassword } = await import("@/lib/auth");
+    const { isValidEmail, normalizeEmail } = await import("@/lib/auth-validation");
     const { getMongoDb } = await import("@/lib/mongodb");
     const { requirePermission } = await import("@/lib/authorization-server");
     const { role } = await requirePermission(data.token, "createUsers");

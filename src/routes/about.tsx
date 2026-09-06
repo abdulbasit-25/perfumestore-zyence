@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { StoreShell } from "@/components/storefront/shell";
-import { ArrowRight, HeartHandshake, Leaf, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Droplets, HeartHandshake, Leaf, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -9,13 +9,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Learn about Zyence, our mission, our values, and why fragrance lovers choose our composed scents.",
+          "Zyence is an independent perfume house composing fragrances from honestly sourced aromatics, in small batches, for people who wear scent as a signature rather than a habit.",
       },
       { property: "og:title", content: "About Us — Zyence" },
       {
         property: "og:description",
         content:
-          "A more thoughtful way to shop, with quality materials, personal service, and a clear sense of purpose.",
+          "How we source, compose, and bottle — and why we'd rather make five fragrances well than fifty forgettably.",
       },
     ],
   }),
@@ -24,19 +24,19 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   {
-    icon: ShieldCheck,
-    title: "Trust first",
-    body: "We keep our product selection clear, our communication direct, and our service grounded in the details that matter to real customers.",
+    icon: Leaf,
+    title: "Honest sourcing",
+    body: "We name every aromatic we use, where it grows, and who grows it — from Bulgarian rose to Haitian vetiver — so you know what you're actually wearing.",
   },
   {
-    icon: Leaf,
-    title: "Thoughtful materials",
-    body: "We focus on useful, durable pieces and natural finishes that feel good to live with over time.",
+    icon: Sparkles,
+    title: "Composed, not assembled",
+    body: "Each fragrance is built in top, heart, and base notes over months of iteration on skin, not just on paper — so it still smells like itself six hours in.",
   },
   {
     icon: HeartHandshake,
-    title: "Service with care",
-    body: "Every order is treated as a relationship, not a transaction — from the first click through delivery and follow-up.",
+    title: "Discovery over guesswork",
+    body: "Sample sets, honest notes on how a scent wears, and a team that will tell you when a fragrance isn't right for you.",
   },
 ];
 
@@ -59,32 +59,32 @@ function About() {
             About us
           </p>
           <h1 className="display-xl mt-6 max-w-4xl">
-            A calmer way to shop for everyday essentials.
+            Fragrance built note by note, not off a shelf of shortcuts.
           </h1>
 
           <div className="mt-12 grid gap-10 md:grid-cols-12 md:items-center">
             <div className="space-y-5 text-base leading-7 text-muted-foreground md:col-span-6">
               <p>
-                Zyence is an independent fragrance house focused on scents that are precise,
-                beautiful, and easy to live with. We curate products with intention, balancing
-                quality and simplicity so customers can build a home or wardrobe that feels
-                considered rather than cluttered.
+                Zyence is an independent perfume house. We compose scents in small batches, working
+                from raw aromatics — absolutes, resins, isolates — rather than pre-blended bases,
+                because that's the only way to know exactly what's in a bottle and why it smells the
+                way it does.
               </p>
               <p>
-                Our brand stands for thoughtful design, honest materials, and a slower rhythm of
-                shopping. We believe that good products should make daily life easier, more
-                comfortable, and more joyful without excess or complexity.
+                Every fragrance starts as dozens of trial accords on blotter and skin before we
+                commit to a formula. We'd rather spend a year getting one composition right than
+                release six that are merely fine.
               </p>
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link
                   to="/shop"
                   className="label-caps group inline-flex items-center gap-2 bg-primary px-6 py-3.5 text-primary-foreground transition-colors hover:bg-olive hover:text-accent-foreground"
                 >
-                  Shop now
+                  Shop the collection
                   <ArrowRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
                 </Link>
                 <Link to="/shop" className="label-caps link-underline text-muted-foreground">
-                  Explore our products
+                  Order a discovery set
                 </Link>
               </div>
             </div>
@@ -96,8 +96,8 @@ function About() {
               />
               <div className="media-zoom relative overflow-hidden rounded-sm border border-border/60 shadow-[var(--shadow-media-about)]">
                 <img
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
-                  alt="A warm, minimal home environment with natural textures"
+                  src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Amber perfume bottle and raw aromatic ingredients on a work bench"
                   loading="lazy"
                   className="aspect-[4/5] w-full object-cover"
                 />
@@ -129,50 +129,56 @@ function About() {
           <div>
             <p className="label-caps text-olive">Our story</p>
             <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
-              Built around usefulness, character, and trust.
+              Started on a kitchen table with a mixing kit and too many blotter strips.
             </h2>
             <div className="mt-6 space-y-4 text-base leading-7 text-muted-foreground">
               <p>
-                We began with a simple idea: a better shopping experience should feel personal,
-                informed, and easy to trust. Instead of flooding the market with disposable
-                products, we select pieces that look good in daily life and stand up to repeated
-                use.
+                Zyence began with a founder frustrated by how little most fragrance brands would
+                tell her about what she was actually spraying on her skin. Formulas listed as
+                "parfum," notes described in mood-board language, no real answer to a simple
+                question: what's in this bottle?
               </p>
               <p>
-                That philosophy shapes everything we do — from the brands we carry to the way we
-                communicate with customers. We prefer clarity over noise, quality over excess, and a
-                supportive experience over a rushed one.
+                So she started blending on her own — a bergamot here, an oud accord there, testing
+                how they aged over a day rather than judging them fresh off the strip. What began as
+                a hobby became a habit, and the habit became a house: today Zyence works with
+                growers and distillers directly, keeps formulas on file for anyone who asks, and
+                composes every scent to be worn, not just sampled.
               </p>
               <p>
-                Customers return to Zyence because they know they will find fragrances they can rely
-                on and a store that values their time, questions, and confidence. We are committed
-                to being a dependable place to shop for the pieces that make home and routine feel a
-                little more considered.
+                We're still small. Every batch is mixed, macerated, and bottled by hand, and every
+                fragrance carries a real perfumer's name, not a marketing one. Customers come back
+                because a Zyence bottle smells the same on day one hundred as it did on day one —
+                and because when they ask what's in it, we actually tell them.
               </p>
             </div>
           </div>
 
           <div className="rounded-sm border border-border/60 bg-surface p-6 md:p-8">
             <p className="label-caps flex items-center gap-2 text-olive">
-              <Sparkles className="h-3.5 w-3.5" />
-              Why customers choose us
+              <Droplets className="h-3.5 w-3.5" />
+              How we work
             </p>
             <ul className="mt-6 space-y-4 text-sm leading-6 text-muted-foreground">
               <li className="flex gap-3">
-                <Star className="mt-0.5 h-4 w-4 shrink-0 text-olive" />
-                Carefully chosen products with a clear point of view.
+                <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-olive" />
+                Full notes for every fragrance — top, heart, and base — listed on the product page,
+                not hidden behind "parfum."
               </li>
               <li className="flex gap-3">
-                <Star className="mt-0.5 h-4 w-4 shrink-0 text-olive" />
-                Clear communication and straightforward customer service.
+                <Leaf className="mt-0.5 h-4 w-4 shrink-0 text-olive" />
+                Aromatics sourced from named growers and distillers, with sustainable alternatives
+                used wherever an ingredient is under pressure.
               </li>
               <li className="flex gap-3">
-                <Star className="mt-0.5 h-4 w-4 shrink-0 text-olive" />A focus on quality and
-                long-term value instead of trends for their own sake.
+                <Droplets className="mt-0.5 h-4 w-4 shrink-0 text-olive" />
+                Small-batch macerated for a minimum of four weeks before bottling, so the accord has
+                time to settle before it reaches you.
               </li>
               <li className="flex gap-3">
-                <Star className="mt-0.5 h-4 w-4 shrink-0 text-olive" />A retail experience built to
-                feel warm, informed, and easy to navigate.
+                <HeartHandshake className="mt-0.5 h-4 w-4 shrink-0 text-olive" />
+                Discovery sets and honest wear-testing notes, so you can find your scent before
+                committing to a full bottle.
               </li>
             </ul>
           </div>

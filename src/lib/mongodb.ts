@@ -83,6 +83,7 @@ async function ensureIndexOnce(
   key: IndexDescription["key"],
   options: CreateIndexesOptions,
 ): Promise<void> {
+  await ensureCollection(db, collectionName);
   const collection = db.collection(collectionName);
   const indexes = await collection.listIndexes().toArray();
   const requestedKey = JSON.stringify(key);

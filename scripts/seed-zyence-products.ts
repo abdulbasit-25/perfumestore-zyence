@@ -1,7 +1,6 @@
 /// <reference types="node" />
 import * as fs from "fs";
 import * as path from "path";
-import { uploadProductImage } from "../src/lib/cloudinary";
 
 // Load environment variables from .env file
 const envPath = path.resolve(process.cwd(), ".env");
@@ -205,7 +204,6 @@ async function seedZyenceProducts() {
       ["eau-de-parfum", "Eau de Parfum"],
       ["attars-oils", "Attars / Oils"],
       ["home-fragrance", "Home Fragrance"],
-      ["accessories", "Accessories"],
       ["gift-sets", "Gift Sets"],
     ];
 
@@ -241,31 +239,33 @@ async function seedZyenceProducts() {
       // Check if product already exists
       const existing = await productsCollection.findOne({ sku: product.sku });
 
-      if (existing) {
-        console.log(`Product ${product.name} already exists, skipping...`);
-      } else {
-        const now = new Date();
-        const document = {
-          name: product.name,
-          slug: product.slug,
-          description: product.description,
-          price: product.price,
-          sku: product.sku,
-          stock: product.stock,
-          categoryId: categoryIds.get(product.categorySlug),
-          images: [{ ...placeholderImage, alt: product.name }],
-          isActive: product.isActive,
-          rating: product.rating,
-          reviewCount: 0,
-          fragrance: product.fragrance,
-          createdAt: new Date(product.createdAt),
-          updatedAt: now,
-        };
+      const now = new Date();
+      const document = {
+        name: product.name,
+        slug: product.slug,
+        description: product.description,
+        price: product.price,
+        sku: product.sku,
+        stock: product.stock,
+        categoryId: categoryIds.get(product.categorySlug),
+        images: existing?.images?.length
+          ? existing.images
+          : [{ ...placeholderImage, alt: product.name }],
+        isActive: product.isActive,
+        rating: product.rating,
+        reviewCount: existing?.reviewCount ?? 0,
+        fragrance: product.fragrance,
+        createdAt: existing?.createdAt ?? new Date(product.createdAt),
+        updatedAt: now,
+      };
 
-        await productsCollection.insertOne(document);
-        createdCount++;
-        console.log(`✓ Created: ${product.name}`);
-      }
+      await productsCollection.updateOne(
+        { sku: product.sku },
+        { $set: document },
+        { upsert: true },
+      );
+      createdCount++;
+      console.log(`${existing ? "✓ Updated" : "✓ Created"}: ${product.name}`);
     }
 
     console.log(`\n✓ Zyence seed complete: ${createdCount} products created`);
