@@ -30,7 +30,7 @@ async function testLogin() {
     console.log("Testing login credentials...\n");
 
     // Test admin login
-    const adminEmail = normalizeEmail("admin@sorrel.local");
+    const adminEmail = normalizeEmail("admin@zyence.local");
     const adminUser = await usersCollection.findOne({ email: adminEmail });
 
     if (adminUser) {
@@ -45,7 +45,7 @@ async function testLogin() {
     console.log();
 
     // Test customer login
-    const customerEmail = normalizeEmail("customer@sorrel.local");
+    const customerEmail = normalizeEmail("customer@zyence.local");
     const customerUser = await usersCollection.findOne({ email: customerEmail });
 
     if (customerUser) {
