@@ -4,11 +4,11 @@ import { LegalPage } from "@/components/storefront/legal-page";
 export const Route = createFileRoute("/refund-policy")({
   head: () => ({
     meta: [
-      { title: "Refund Policy — Sorrel" },
+      { title: "Refund Policy — Zyence" },
       {
         name: "description",
         content:
-          "Sorrel's comprehensive refund and return policy. Learn about refund eligibility, processing times, return procedures, and customer support.",
+          "Zyence's comprehensive refund and return policy. Learn about refund eligibility, processing times, return procedures, and customer support.",
       },
     ],
   }),
@@ -20,20 +20,20 @@ function RefundPolicy() {
     <LegalPage
       label="Legal / Trust"
       title="Refund Policy"
-      intro="At Sorrel, we want you to feel confident in every purchase. This Refund Policy outlines how refunds work, eligibility criteria, our process for handling returns, and your rights as a customer. If you have questions or need assistance, our support team is here to help."
+      intro="At Zyence, we want you to feel confident in every purchase. This Refund Policy outlines how refunds work, eligibility criteria, our process for handling returns, and your rights as a customer. If you have questions or need assistance, our support team is here to help."
       sections={[
         {
           heading: "Refund Policy Overview",
           body: [
-            "Sorrel is committed to customer satisfaction. We understand that sometimes a product may not meet your expectations, or circumstances may require you to return an order.",
+            "Zyence is committed to customer satisfaction. We understand that sometimes a fragrance may not be the right fit, or circumstances may require you to return an order.",
             "Eligible refunds are processed through the original payment method where applicable. Our refund process is straightforward: request a refund, provide required information, work with our support team, and receive your refund after approval.",
-            "This policy applies to all orders placed through the Sorrel website. Some exclusions may apply; please review the sections below to understand which items are eligible and any conditions that may apply.",
+            "This policy applies to all orders placed through the Zyence website. Some exclusions may apply; please review the sections below to understand which items are eligible and any conditions that may apply.",
           ],
         },
         {
           heading: "Eligibility for Refunds",
           body: [
-            "To be eligible for a refund, you must have purchased from Sorrel within the last [X days] and meet the conditions outlined below.",
+            "To be eligible for a refund, you must have purchased from Zyence within the last [X days] and meet the conditions outlined below.",
             "Refunds are available for items that have not been used or altered since purchase. The product must be in resalable condition, with original tags and packaging intact where applicable.",
             "Proof of purchase (order number or receipt) and customer contact information are required to process a refund request. If you received the wrong item, a defective item, or a damaged product, special conditions may apply (see the section below for more information).",
             "Orders paid via Cash on Delivery may be handled differently. Please contact support for specific details about your refund eligibility.",
@@ -55,7 +55,7 @@ function RefundPolicy() {
             "When requesting a refund for a damaged or defective item, please provide: your order number, your contact information, a description of the issue, and photographs of the damage or defect if possible.",
             "If you received the wrong product entirely, or if an item is missing from your order, please contact support immediately with your order number and relevant details.",
             "Items damaged due to improper handling after delivery may require evaluation. Our support team will review your request and determine the appropriate resolution.",
-            "Refunds for damaged, defective, or incorrect items are typically processed more quickly than standard returns, as these issues are the responsibility of Sorrel.",
+            "Refunds for damaged, defective, or incorrect items are typically processed more quickly than standard returns, as these issues are the responsibility of Zyence.",
           ],
         },
         {
@@ -86,7 +86,7 @@ function RefundPolicy() {
             "[Store owner note: Define your shipping refund policy clearly. Examples: Do you refund original shipping if the customer changed their mind? Do you refund original shipping for damaged items? Who pays for return shipping?]",
             "Original shipping costs are [refundable / non-refundable] when a customer initiates a standard return (except for damaged, defective, or incorrect items).",
             "For damaged, defective, or incorrect items: [Define your policy. Example: 'Original shipping is fully refunded, and we will provide a return shipping label at no cost.']",
-            "Return shipping costs are the responsibility of [customer / Sorrel]. If we are providing a return label, you are not responsible for return shipping charges.",
+            "Return shipping costs are the responsibility of [customer / Zyence]. If we are providing a return label, you are not responsible for return shipping charges.",
             "If a refund is denied or partially approved, shipping costs will be handled according to the specific circumstances. Our support team will explain this at the time of decision.",
           ],
         },
@@ -124,7 +124,7 @@ function RefundPolicy() {
             "Email: [Support Email]",
             "Phone: [Support Phone]",
             "Business Hours: [Business Hours]",
-            "We are committed to resolving any issues fairly and promptly. Thank you for shopping with Sorrel.",
+            "We are committed to resolving any issues fairly and promptly. Thank you for shopping with Zyence.",
           ],
         },
       ]}
