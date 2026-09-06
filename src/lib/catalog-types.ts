@@ -4,6 +4,18 @@ export type ProductImage = {
   alt: string;
 };
 
+export type FragranceDetails = {
+  concentration?: string;
+  volumeMl?: number;
+  longevity?: string;
+  sillage?: string;
+  notes?: {
+    top: string[];
+    heart: string[];
+    base: string[];
+  };
+};
+
 export type Category = {
   id: string;
   name: string;
@@ -26,6 +38,7 @@ export type Product = {
   isActive: boolean;
   rating: number;
   reviewCount: number;
+  fragrance?: FragranceDetails;
   createdAt: string;
   updatedAt: string;
 };
@@ -42,6 +55,7 @@ export type ProductInput = {
   isActive?: boolean;
   rating?: number;
   reviewCount?: number;
+  fragrance?: FragranceDetails;
 };
 
 export type OrderStatus = "Pending" | "Confirmed" | "Shipped" | "Delivered" | "Cancelled";
