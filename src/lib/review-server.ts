@@ -176,7 +176,7 @@ export const getApprovedReviews = createServerFn({ method: "GET" })
 
     return reviews.map((doc) => ({
       ...toProductReview(doc),
-      productName: String(doc["productName"] ?? "Sorrel item"),
+      productName: String(doc["productName"] ?? "Zyence fragrance"),
     }));
   });
 
