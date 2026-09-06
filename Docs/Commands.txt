@@ -1,0 +1,36 @@
+# E-Commerce Store Commands
+
+# 1) Install dependencies
+npm install
+
+# 2) Create env file from example
+copy .env.example .env
+
+# 3) Set your MongoDB connection in .env
+# Replace the placeholder with your real MongoDB Atlas URI
+# Example:
+# MONGODB_URI=mongodb+srv://username:password@cluster0.mongodb.net/sorrel?retryWrites=true&w=majority
+# JWT_SECRET=your_jwt_secret_key_here_change_in_production
+# NODE_ENV=development
+
+# 4) Run the app in development mode
+npm run dev
+
+# 5) Seed demo users
+npm run seed:users
+
+# 6) Optional build check
+npm run build
+
+# 7) Optional preview production build
+npm run preview
+
+# 8) Optional lint check
+npm run lint
+
+# Login credentials created by the seed script
+# Email: admin@sorrel.local
+# Password: Admin@12345
+#
+# Email: customer@sorrel.local
+# Password: Customer@12345
