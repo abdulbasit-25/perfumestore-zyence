@@ -29,15 +29,15 @@ export const Route = createFileRoute("/product/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Piece not found — Sorrel" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Product not found — Zyence" }, { name: "robots", content: "noindex" }],
       };
     }
     const { product } = loaderData;
     return {
       meta: [
-        { title: `${product.name} — Sorrel` },
+        { title: `${product.name} — Zyence` },
         { name: "description", content: product.description },
-        { property: "og:title", content: `${product.name} — Sorrel` },
+        { property: "og:title", content: `${product.name} — Zyence` },
         { property: "og:description", content: product.description },
       ],
     };
@@ -146,7 +146,48 @@ function ProductDetail() {
                 <dt className="text-muted-foreground">Payment</dt>
                 <dd>Cash on delivery</dd>
               </div>
+              {product.fragrance ? (
+                <>
+                  {product.fragrance.concentration ? (
+                    <div className="flex justify-between">
+                      <dt className="text-muted-foreground">Concentration</dt>
+                      <dd>{product.fragrance.concentration}</dd>
+                    </div>
+                  ) : null}
+                  {product.fragrance.volumeMl ? (
+                    <div className="flex justify-between">
+                      <dt className="text-muted-foreground">Volume</dt>
+                      <dd>{product.fragrance.volumeMl}ml</dd>
+                    </div>
+                  ) : null}
+                  {product.fragrance.longevity ? (
+                    <div className="flex justify-between">
+                      <dt className="text-muted-foreground">Longevity</dt>
+                      <dd>{product.fragrance.longevity}</dd>
+                    </div>
+                  ) : null}
+                  {product.fragrance.sillage ? (
+                    <div className="flex justify-between">
+                      <dt className="text-muted-foreground">Sillage</dt>
+                      <dd>{product.fragrance.sillage}</dd>
+                    </div>
+                  ) : null}
+                </>
+              ) : null}
             </dl>
+
+            {product.fragrance?.notes ? (
+              <div className="mt-8 grid gap-4 border-t border-hairline pt-6 text-sm sm:grid-cols-3">
+                {(["top", "heart", "base"] as const).map((stage) => (
+                  <div key={stage}>
+                    <p className="label-caps text-olive">{stage} notes</p>
+                    <p className="mt-2 text-muted-foreground">
+                      {product.fragrance?.notes?.[stage].join(", ")}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            ) : null}
 
             <div className="mt-10 flex flex-wrap items-stretch gap-3">
               <div className="flex items-center border border-hairline">
