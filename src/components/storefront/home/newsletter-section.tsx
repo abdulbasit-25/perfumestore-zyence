@@ -13,10 +13,10 @@ export function NewsletterSection() {
               </div>
             </div>
             <h2 className="font-display mt-4 text-3xl leading-tight sm:text-4xl md:text-5xl">
-              Join the atelier list
+              First access to new scents
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
-              Early access to drops, atelier notes, and 10% off your first order.
+              Early access to launches, fragrance notes, and exclusive subscriber offers.
             </p>
 
             <form
