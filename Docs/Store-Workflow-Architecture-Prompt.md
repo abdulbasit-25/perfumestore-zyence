@@ -133,7 +133,7 @@ Example:
 CTA:
 
 - Shop Collection
-- Explore Atelier
+- Explore Zyence Studio
 
 ---
 
@@ -1059,7 +1059,7 @@ Sections:
 - Craftsmanship
 - Materials
 - Team
-- Atelier
+- Zyence Studio
 - Sustainability
 - CTA
 
