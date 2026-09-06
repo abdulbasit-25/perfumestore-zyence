@@ -147,7 +147,7 @@ Docs/
 
 ## Notes
 
-- The storefront and admin experience are intentionally branded around Zyence rather than the legacy Sorrel identity.
+- The storefront and admin experience are branded around Zyence throughout.
 - The checkout flow remains cash-on-delivery based and is not a third-party payment gateway implementation.
 - For a fully populated local catalog, seed the demo users and Zyence product data after setting your MongoDB URI.
 
