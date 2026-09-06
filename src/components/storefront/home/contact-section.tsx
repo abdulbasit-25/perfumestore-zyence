@@ -18,7 +18,7 @@ export function ContactSection() {
         {/* Spine label — desktop only */}
         <div className="hidden shrink-0 md:flex md:w-10 md:items-start md:justify-center">
           <span className="label-caps origin-top-left translate-y-full -rotate-90 whitespace-nowrap text-olive">
-            Contact — Sorrel Atelier — 2026
+            Contact — Zyence Studio — 2026
           </span>
         </div>
 
@@ -42,13 +42,13 @@ export function ContactSection() {
             </p>
 
             <div className="mt-8 space-y-5 md:mt-10">
-              <a href="mailto:hello@sorrelatelier.com" className="group flex items-center gap-4">
+              <a href="mailto:hello@zyence.com" className="group flex items-center gap-4">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border/60 transition-colors group-hover:border-olive group-hover:bg-olive/5">
                   <Mail className="h-4 w-4 text-olive" />
                 </span>
 
                 <span className="text-sm transition-colors group-hover:text-olive">
-                  hello@sorrelatelier.com
+                  hello@zyence.com
                 </span>
               </a>
 
@@ -67,7 +67,9 @@ export function ContactSection() {
                   <MapPin className="h-4 w-4 text-olive" />
                 </span>
 
-                <span className="text-sm text-muted-foreground">The Atelier · London, UK</span>
+                <span className="text-sm text-muted-foreground">
+                  Zyence Studio · Earth City, EC
+                </span>
               </div>
             </div>
           </div>
@@ -82,7 +84,7 @@ export function ContactSection() {
 
             <div className="relative rounded-sm border border-border/60 bg-background p-6 shadow-[var(--shadow-media)] md:p-10">
               <div className="mb-8">
-                <p className="label-caps text-olive">Write to the atelier</p>
+                <p className="label-caps text-olive">Write to our studio</p>
                 <p className="mt-2 text-sm text-muted-foreground">
                   We usually reply within one working day.
                 </p>
