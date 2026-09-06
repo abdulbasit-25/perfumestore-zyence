@@ -12,26 +12,26 @@ async function seedUsers() {
     await usersCollection.createIndex({ email: 1 }, { unique: true });
 
     // Admin user
-    const adminEmail = normalizeEmail("admin@sorrel.local");
+    const adminEmail = normalizeEmail("admin@zyence.local");
     const adminPasswordHash = await hashPassword("Admin@12345");
 
     const existingAdmin = await usersCollection.findOne({ email: adminEmail });
     if (!existingAdmin) {
       await usersCollection.insertOne({
-        name: "Sorrel Administrator",
+        name: "Zyence Administrator",
         email: adminEmail,
         passwordHash: adminPasswordHash,
         role: "admin",
         createdAt: new Date(),
         updatedAt: new Date(),
       });
-      console.log("✓ Admin user created (admin@sorrel.local)");
+      console.log("✓ Admin user created (admin@zyence.local)");
     } else {
       console.log("✓ Admin user already exists");
     }
 
     // Customer user
-    const customerEmail = normalizeEmail("customer@sorrel.local");
+    const customerEmail = normalizeEmail("customer@zyence.local");
     const customerPasswordHash = await hashPassword("Customer@12345");
 
     const existingCustomer = await usersCollection.findOne({ email: customerEmail });
@@ -44,7 +44,7 @@ async function seedUsers() {
         createdAt: new Date(),
         updatedAt: new Date(),
       });
-      console.log("✓ Customer user created (customer@sorrel.local)");
+      console.log("✓ Customer user created (customer@zyence.local)");
     } else {
       console.log("✓ Customer user already exists");
     }
