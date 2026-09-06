@@ -359,10 +359,10 @@ For development/testing, create exactly:
 
 ```text
 Name:
-Sorrel Administrator
+Zyence Administrator
 
 Email:
-admin@sorrel.local
+admin@zyence.local
 
 Password:
 Admin@12345
@@ -378,7 +378,7 @@ Name:
 Demo Customer
 
 Email:
-customer@sorrel.local
+customer@zyence.local
 
 Password:
 Customer@12345
@@ -402,14 +402,14 @@ credentials.txt
 with:
 
 ```text
-SORREL E-COMMERCE — DEMO CREDENTIALS
+ZYENCE E-COMMERCE — DEMO CREDENTIALS
 
 ===================================
 
 ADMIN ACCOUNT
 
-Name: Sorrel Administrator
-Email: admin@sorrel.local
+Name: Zyence Administrator
+Email: admin@zyence.local
 Password: Admin@12345
 Role: admin
 
@@ -417,7 +417,7 @@ Role: admin
 CUSTOMER ACCOUNT
 
 Name: Demo Customer
-Email: customer@sorrel.local
+Email: customer@zyence.local
 Password: Customer@12345
 Role: customer
 
@@ -681,7 +681,7 @@ Example:
 Welcome, Demo Customer
 
 Email:
-customer@sorrel.local
+customer@zyence.local
 
 Account Type:
 Customer
@@ -944,8 +944,8 @@ Success:
   "success": true,
   "user": {
     "id": "...",
-    "name": "Sorrel Administrator",
-    "email": "admin@sorrel.local",
+    "name": "Zyence Administrator",
+    "email": "admin@zyence.local",
     "role": "admin"
   }
 }
@@ -1004,13 +1004,13 @@ users.email
 Normalize email before storing:
 
 ```text
-admin@sorrel.local
+admin@zyence.local
 ```
 
 so:
 
 ```text
-Admin@Sorrel.Local
+Admin@Zyence.Local
 ```
 
 does not accidentally create a second account.
@@ -1158,7 +1158,7 @@ Test this exact workflow.
 Open /login
 
 Email:
-admin@sorrel.local
+admin@zyence.local
 
 Password:
 Admin@12345
@@ -1181,7 +1181,7 @@ Then:
 
 ```text
 Email:
-customer@sorrel.local
+customer@zyence.local
 
 Password:
 Customer@12345
@@ -1349,7 +1349,7 @@ MongoDB Atlas
 Do NOT write:
 
 ```typescript
-if (email === "admin@sorrel.local" && password === "Admin@12345") {
+if (email === "admin@zyence.local" && password === "Admin@12345") {
   // login
 }
 ```
@@ -1555,7 +1555,7 @@ Do not remove existing functionality.
 The final architecture must be:
 
 ```text
-                    SORREL E-COMMERCE
+                    ZYENCE E-COMMERCE
                            │
               ┌────────────┴────────────┐
               │                         │
