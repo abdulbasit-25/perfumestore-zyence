@@ -63,12 +63,12 @@ async function testLogin() {
     console.log("\n📝 Login Test Credentials:");
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
     console.log("Admin:");
-    console.log("  Email:    admin@sorrel.local");
+    console.log("  Email:    admin@zyence.local");
     console.log("  Password: Admin@12345");
     console.log("  Redirects to: /admin");
     console.log();
     console.log("Customer:");
-    console.log("  Email:    customer@sorrel.local");
+    console.log("  Email:    customer@zyence.local");
     console.log("  Password: Customer@12345");
     console.log("  Redirects to: /account");
     console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
