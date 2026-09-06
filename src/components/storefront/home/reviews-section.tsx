@@ -17,7 +17,7 @@ export function ReviewsSection() {
         <div>
           <p className="label-caps text-olive">Customer notes</p>
           <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
-            Loved by slow-living rituals
+            Worn as a personal ritual
           </h2>
         </div>
         <Link
