@@ -72,7 +72,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const themeScript = `(function(){try{var s=localStorage.getItem('sorrel-theme');var t=s?JSON.parse(s).state.theme:'light';if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`;
+const themeScript = `(function(){try{var s=localStorage.getItem('zyence-theme');var t=s?JSON.parse(s).state.theme:'light';if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`;
 
 // Suppress AsyncLocalStorage error which is a known TanStack Start issue
 const errorSuppressionScript = `(function(){var originalError=console.error;console.error=function(){if(arguments[0]&&typeof arguments[0]==='string'&&arguments[0].includes('AsyncLocalStorage is not a constructor')){return;}originalError.apply(console,arguments)};window.addEventListener('error',function(e){if(e.message&&e.message.includes('AsyncLocalStorage is not a constructor')){e.preventDefault();}},true);})();`;
@@ -82,16 +82,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sorrel — Slow-made goods, paid on delivery" },
+      { title: "Zyence — Fine fragrance, composed with precision" },
       {
         name: "description",
         content:
-          "Sorrel is an independent atelier making linen apparel, stoneware ceramics and considered objects. Cash on delivery.",
+          "Zyence is a fine fragrance house creating expertly-composed eau de parfum, attars, and home scents. Pay on delivery.",
       },
-      { property: "og:title", content: "Sorrel — Slow-made goods" },
+      { property: "og:title", content: "Zyence — Fine fragrance" },
       {
         property: "og:description",
-        content: "Linen apparel, stoneware and objects from an independent atelier.",
+        content: "Expertly-composed fragrances from Zyence, a modern fragrance house.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
