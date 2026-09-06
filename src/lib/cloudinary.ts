@@ -31,7 +31,7 @@ export async function uploadProductImage(
 ): Promise<{ url: string; publicId: string }> {
   const { cloudName, apiKey, apiSecret } = cloudinaryConfig();
   const timestamp = Math.floor(Date.now() / 1000).toString();
-  const publicId = `sorrel/products/${productId}/${fileName.replace(/[^a-zA-Z0-9_-]/g, "-")}`;
+  const publicId = `zyence/products/${productId}/${fileName.replace(/[^a-zA-Z0-9_-]/g, "-")}`;
   const params = { public_id: publicId, timestamp };
   const body = new FormData();
   body.append("file", `data:application/octet-stream;base64,${data.toString("base64")}`);
