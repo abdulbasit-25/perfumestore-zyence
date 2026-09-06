@@ -4,11 +4,11 @@ import { LegalPage } from "@/components/storefront/legal-page";
 export const Route = createFileRoute("/terms-conditions")({
   head: () => ({
     meta: [
-      { title: "Terms & Conditions — Sorrel" },
+      { title: "Terms & Conditions — Zyence" },
       {
         name: "description",
         content:
-          "Review Sorrel's terms covering eligibility, ordering, payments, shipping, returns, and customer responsibilities.",
+          "Review Zyence's terms covering eligibility, ordering, payments, shipping, returns, and customer responsibilities.",
       },
     ],
   }),
@@ -25,7 +25,7 @@ function TermsAndConditions() {
         {
           heading: "Introduction",
           body: [
-            "These terms apply to your use of the Sorrel website and to any purchases made through it. By accessing or using the website, you agree to be bound by these terms and any additional policies referenced within them, including our Privacy Policy and Cookie Policy.",
+            "These terms apply to your use of the Zyence website and to any purchases made through it. By accessing or using the website, you agree to be bound by these terms and any additional policies referenced within them, including our Privacy Policy and Cookie Policy.",
             "We may update these Terms & Conditions from time to time. Any changes become effective when posted on the site, and continued use of the website means you accept the updated terms.",
           ],
         },
@@ -81,7 +81,7 @@ function TermsAndConditions() {
         {
           heading: "Intellectual Property",
           body: [
-            "All content on this website, including text, graphics, logos, product photography, layout, and branding, is owned by Sorrel or used under license. You may not reproduce, distribute, or use this content without our permission unless expressly allowed by law.",
+            "All content on this website, including text, graphics, logos, product photography, layout, and branding, is owned by Zyence or used under license. You may not reproduce, distribute, or use this content without our permission unless expressly allowed by law.",
             "Any trademarks, brand names, or product names appearing on the site remain the property of their respective owners.",
           ],
         },
