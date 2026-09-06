@@ -8,8 +8,8 @@ const badges = [
   },
   {
     icon: RefreshCcw,
-    label: "14-day returns",
-    body: "Free returns within two weeks on eligible goods",
+    label: "Sealed returns",
+    body: "Returns within two weeks on eligible unopened fragrances",
   },
   {
     icon: Globe2,
@@ -18,8 +18,8 @@ const badges = [
   },
   {
     icon: ShieldCheck,
-    label: "Secure checkout",
-    body: "Protected order, verified courier, full support",
+    label: "Vegan & cruelty-free",
+    body: "Thoughtfully composed fragrances with transparent care",
   },
 ];
 
