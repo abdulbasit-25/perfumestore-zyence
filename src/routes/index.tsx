@@ -25,20 +25,20 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Sorrel — Linen, stoneware and objects",
+        title: "Zyence — Fine fragrance, expertly composed",
       },
       {
         name: "description",
         content:
-          "An independent atelier of linen apparel, hand-thrown ceramics and considered objects. Pay on delivery, ships worldwide.",
+          "A modern fragrance house creating small-batch eau de parfum, attars, and home scents. Pay on delivery, ships worldwide.",
       },
       {
         property: "og:title",
-        content: "Sorrel — Linen, stoneware and objects",
+        content: "Zyence — Fine fragrance",
       },
       {
         property: "og:description",
-        content: "Slow-made goods from an independent atelier. Pay on delivery.",
+        content: "Expertly-composed fragrances from a modern fragrance house. Pay on delivery.",
       },
     ],
   }),
