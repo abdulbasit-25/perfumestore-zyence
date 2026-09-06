@@ -43,16 +43,16 @@ export const Route = createFileRoute("/shop")({
   }),
   head: () => ({
     meta: [
-      { title: "Shop all — Sorrel" },
+      { title: "Shop all — Zyence" },
       {
         name: "description",
         content:
-          "Browse linen apparel, hand-thrown ceramics, woven textiles and objects. Filter by category, price and availability.",
+          "Browse eau de parfum, attars, home fragrance, and discovery sets. Filter by category, price and availability.",
       },
-      { property: "og:title", content: "Shop all — Sorrel" },
+      { property: "og:title", content: "Shop all — Zyence" },
       {
         property: "og:description",
-        content: "Linen apparel, ceramics, textiles and objects, made in small runs.",
+        content: "Small-batch fragrances, attars, home scents, and discovery sets from Zyence.",
       },
     ],
   }),
