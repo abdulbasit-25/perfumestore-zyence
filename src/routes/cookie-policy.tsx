@@ -4,11 +4,11 @@ import { LegalPage } from "@/components/storefront/legal-page";
 export const Route = createFileRoute("/cookie-policy")({
   head: () => ({
     meta: [
-      { title: "Cookie Policy — Sorrel" },
+      { title: "Cookie Policy — Zyence" },
       {
         name: "description",
         content:
-          "Learn what cookies we use on Sorrel, why we use them, and how you can manage your cookie preferences.",
+          "Learn what cookies we use on Zyence, why we use them, and how you can manage your cookie preferences.",
       },
     ],
   }),
