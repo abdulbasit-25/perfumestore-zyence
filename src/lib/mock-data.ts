@@ -16,7 +16,7 @@ export const faqEntries: FaqEntry[] = [
     id: "f1",
     question: "How long is shipping?",
     answer:
-      "Domestic orders typically ship within 2–3 business days and arrive within 4–6 days. International orders take 7–14 business days depending on destination. You will receive a tracking link once your order leaves the atelier.",
+      "Domestic orders typically ship within 2–3 business days and arrive within 4–6 days. International orders take 7–14 business days depending on destination. You will receive a tracking link once your fragrance order leaves our studio.",
   },
   {
     id: "f2",
@@ -28,7 +28,7 @@ export const faqEntries: FaqEntry[] = [
     id: "f3",
     question: "What is the return policy?",
     answer:
-      "We accept returns within 14 days of delivery on unworn, unused items with original tags and packaging. Ceramics and sale items are final sale. To initiate a return, reply to your order confirmation with your order number.",
+      "We accept returns within 14 days of delivery on sealed, unused fragrance products in their original packaging. Opened or tested fragrances are generally not eligible for hygiene reasons. Contact support with your order number before sending anything back.",
   },
   {
     id: "f4",
@@ -38,9 +38,9 @@ export const faqEntries: FaqEntry[] = [
   },
   {
     id: "f5",
-    question: "Is there a size guide?",
+    question: "How should I choose a fragrance?",
     answer:
-      "A detailed size guide is available on every apparel product page, just below the add-to-cart button. Our linen runs relaxed — if between sizes, we recommend sizing down. Knits are true to size. Still unsure? Write to us with your measurements.",
+      "Start with the notes and mood described on each product page. Discovery sets are ideal when you want to compare several compositions before choosing a full bottle. Our team can also help you choose by scent family.",
   },
   {
     id: "f6",
@@ -60,42 +60,42 @@ export type InstagramPost = {
 export const instagramPosts: InstagramPost[] = [
   {
     id: "i1",
-    handle: "@sorrel.atelier",
+    handle: "@zyence_fragrance",
     caption:
       "Slow Saturday mornings with the cream mug pair. Wheel-thrown, satin-glazed, made to last.",
     image: mugs,
   },
   {
     id: "i2",
-    handle: "@sorrel.atelier",
+    handle: "@zyence_fragrance",
     caption:
       "The olive vase in the wild — sent in from a home in Porto. Each piece finds its own light.",
     image: vase,
   },
   {
     id: "i3",
-    handle: "@sorrel.atelier",
+    handle: "@zyence_fragrance",
     caption:
       "Washed European linen, now in the studio in four colours. Softens every time it goes through the machine.",
     image: shirt,
   },
   {
     id: "i4",
-    handle: "@sorrel.atelier",
+    handle: "@zyence_fragrance",
     caption:
       "Brass and walnut, hand-turned and finished in our workshop. Warm evenings begin early this season.",
     image: lamp,
   },
   {
     id: "i5",
-    handle: "@sorrel.atelier",
+    handle: "@zyence_fragrance",
     caption:
       "The lambswool throw, woven in a family mill outside Porto. A lifetime piece, not a season.",
     image: throwBlanket,
   },
   {
     id: "i6",
-    handle: "@sorrel.atelier",
+    handle: "@zyence_fragrance",
     caption: "Vegetable-tanned tote three months in. The patina belongs to whoever carries it.",
     image: tote,
   },
