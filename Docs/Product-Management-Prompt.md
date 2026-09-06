@@ -1,6 +1,6 @@
 Implement Production-Ready Product Management with MongoDB + Cloudinary
 
-You are working on the Sorrel E-Commerce Store built with TanStack Start + React + TypeScript + MongoDB.
+You are working on the Zyence E-Commerce Store built with TanStack Start + React + TypeScript + MongoDB.
 
 The current project is a high-fidelity prototype. Products are still backed by src/lib/mock-data.ts, Zustand, localStorage, and /assets/ images.
 
@@ -196,7 +196,7 @@ Never expose CLOUDINARY_API_SECRET to the client.
 
 Use a sensible product folder structure, for example:
 
-sorrel/products/{product-id}/
+zyence/products/{product-id}/
 
 or another clean equivalent.
 
@@ -222,7 +222,7 @@ MongoDB should store:
 
 {
 url: "https://...",
-publicId: "sorrel/products/...",
+publicId: "zyence/products/...",
 alt: "..."
 }
 
@@ -662,7 +662,7 @@ Do not leave /assets/ images as production product storage.
 Do not silently swallow database or Cloudinary failures.
 Do not claim something is database-backed unless it actually persists to MongoDB.
 Do not mark the task complete until the complete flow has been verified end-to-end.
-Keep the existing Sorrel design and UX intact wherever possible.
+Keep the existing Zyence design and UX intact wherever possible.
 Final Deliverable
 
 At the end, provide a concise implementation report containing:
