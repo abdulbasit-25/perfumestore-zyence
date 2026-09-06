@@ -10,11 +10,11 @@ export function InstagramFeedSection({ posts }: InstagramFeedSectionProps) {
     <section className="rule-top mx-auto max-w-[1500px] px-5 py-16 md:px-10 md:py-20">
       <div className="mb-8 flex items-end justify-between">
         <div>
-          <p className="label-caps text-olive">@sorrel.atelier</p>
+          <p className="label-caps text-olive">@zyence_fragrance</p>
           <h2 className="font-display mt-3 text-3xl md:text-4xl">From our feed</h2>
         </div>
         <a
-          href="https://instagram.com/sorrel.atelier"
+          href="https://instagram.com/zyence_fragrance"
           target="_blank"
           rel="noreferrer"
           className="label-caps link-underline group inline-flex items-center gap-1.5"
@@ -28,7 +28,7 @@ export function InstagramFeedSection({ posts }: InstagramFeedSectionProps) {
         {posts.map((post) => (
           <a
             key={post.id}
-            href="https://instagram.com/sorrel.atelier"
+            href="https://instagram.com/zyence_fragrance"
             target="_blank"
             rel="noreferrer"
             className="group relative aspect-square overflow-hidden bg-background"
