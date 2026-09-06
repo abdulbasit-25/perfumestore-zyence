@@ -17,12 +17,12 @@ import { useAuth, useHydrated } from "@/lib/store";
 export const Route = createFileRoute("/account")({
   head: () => ({
     meta: [
-      { title: "My account — Sorrel" },
-      { name: "description", content: "Manage your Sorrel profile, orders and delivery details." },
-      { property: "og:title", content: "My account — Sorrel" },
+      { title: "My account — Zyence" },
+      { name: "description", content: "Manage your Zyence profile, orders and delivery details." },
+      { property: "og:title", content: "My account — Zyence" },
       {
         property: "og:description",
-        content: "Manage your Sorrel profile, orders and delivery details.",
+        content: "Manage your Zyence profile, orders and delivery details.",
       },
     ],
   }),
@@ -232,7 +232,7 @@ function SecuritySection({ email }: { email: string }) {
       <AccountSectionHeader
         eyebrow="Account protection"
         title="Security"
-        description="Your account is protected by the sign-in system already connected to Sorrel."
+        description="Your account is protected by the sign-in system already connected to Zyence."
       />
       <Card className="mt-6 max-w-xl rounded-none shadow-none">
         <CardContent className="flex items-start gap-4 p-6">
