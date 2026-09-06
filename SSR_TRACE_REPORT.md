@@ -229,7 +229,7 @@ No `throw new Error` appears in `src/routes/index.tsx`, `src/lib/product-server.
 | `mongodb.ts:29`         | MongoDB connection failed or timed out            | Check Atlas network access, credentials, TLS, DNS, region, and connection limits.                                                            |
 | `mongodb.ts:37`         | MongoDB connection error is logged and rethrown   | The upstream SSR/server-function handler receives the rejection.                                                                             |
 | `mongodb.ts:73`, `:76`  | Product index setup failed                        | Check index permissions, duplicate existing indexes, or Atlas availability.                                                                  |
-| `product-server.ts:82`  | Product query failed                              | Check collection access, database name `sorrel`, and MongoDB connectivity.                                                                   |
+| `product-server.ts:82`  | Product query failed                              | Check collection access, database name `zyence`, and MongoDB connectivity.                                                                   |
 | `category-server.ts:31` | Category query failed                             | Same connection/collection checks for `categories`.                                                                                          |
 | `server.ts:83-84`       | TanStack request failed or normalization ran      | This is the outer response boundary, not the root database cause.                                                                            |
 
