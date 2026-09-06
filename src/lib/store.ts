@@ -21,7 +21,7 @@ export const useTheme = create<{ theme: Theme; toggle: () => void; set: (t: Them
         set({ theme });
       },
     }),
-    { name: "sorrel-theme" },
+    { name: "zyence-theme" },
   ),
 );
 
@@ -87,7 +87,7 @@ export const useCart = create<{
         set((state) => ({ lines: state.lines.filter((l) => l.productId !== productId) })),
       clear: () => set({ lines: [] }),
     }),
-    { name: "sorrel-cart" },
+    { name: "zyence-cart" },
   ),
 );
 
@@ -109,7 +109,7 @@ export const useWishlist = create<{
             : [...state.productIds, productId],
         })),
     }),
-    { name: "sorrel-wishlist" },
+    { name: "zyence-wishlist" },
   ),
 );
 
