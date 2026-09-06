@@ -21,9 +21,9 @@ export type ChatbotReply = {
 };
 
 export const chatbotConfig = {
-  storeName: "Sorrel",
+  storeName: "Zyence",
   support: {
-    email: "hello@sorrelgoods.com",
+    email: "hello@zyence.com",
     phone: "+92 341 5878569",
     hours: "Monday to Friday, 9:00 AM to 6:00 PM",
     contactPage: "/about",
@@ -181,24 +181,21 @@ export function findProductMatches(
   }
 
   const categoryMap: Record<string, string> = {
-    apparel: "apparel",
-    shirt: "apparel",
-    shirts: "apparel",
-    sweater: "apparel",
-    sweaters: "apparel",
-    mug: "ceramics",
-    mugs: "ceramics",
-    vase: "ceramics",
-    lamp: "objects",
-    lighting: "objects",
-    tote: "objects",
-    bag: "objects",
-    throw: "textiles",
-    blanket: "textiles",
-    textile: "textiles",
-    textiles: "textiles",
-    ceramics: "ceramics",
-    objects: "objects",
+    perfume: "eau-de-parfum",
+    fragrance: "eau-de-parfum",
+    parfum: "eau-de-parfum",
+    edp: "eau-de-parfum",
+    attar: "attars-oils",
+    attars: "attars-oils",
+    oils: "attars-oils",
+    candle: "home-fragrance",
+    candles: "home-fragrance",
+    diffuser: "home-fragrance",
+    diffusers: "home-fragrance",
+    discovery: "gift-sets",
+    gift: "gift-sets",
+    gifts: "gift-sets",
+    set: "gift-sets",
   };
 
   const categoryKey = Object.keys(categoryMap).find((key) => normalized.includes(key));
@@ -210,13 +207,14 @@ export function findProductMatches(
   }
 
   const fallbackTriggerTokens = new Set([
-    "linen",
-    "stoneware",
-    "throw",
-    "tote",
-    "mug",
-    "sweater",
-    "lamp",
+    "perfume",
+    "fragrance",
+    "scent",
+    "attar",
+    "oil",
+    "candle",
+    "diffuser",
+    "discovery",
     "products",
     "product",
     "catalog",
@@ -251,13 +249,13 @@ export function findProductMatches(
   const fallbackByName = availableProducts.filter((product) => {
     const name = product.name.toLowerCase();
     return tokens.some((token) => fallbackTriggerTokens.has(token))
-      ? ["linen", "stoneware", "throw", "tote", "mug", "sweater", "lamp"].some((term) =>
-          name.includes(term),
+      ? ["perfume", "fragrance", "scent", "attar", "oil", "candle", "diffuser", "discovery"].some(
+          (term) => name.includes(term),
         )
       : false;
   });
 
-  return fallbackByName.slice(0, maxResults);
+  return (fallbackByName.length > 0 ? fallbackByName : availableProducts).slice(0, maxResults);
 }
 
 export function findPriceMatches(query: string, maxResults = 3) {
