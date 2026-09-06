@@ -64,7 +64,7 @@ export function AdminShell({ title, children }: { title: string; children: React
     <div className="flex min-h-screen bg-background">
       <aside className="hidden w-56 shrink-0 flex-col border-r border-border bg-sidebar md:flex">
         <Link to="/" className="border-b border-border px-5 py-4 font-display text-xl">
-          Sorrel <span className="label-caps text-muted-foreground">Ops</span>
+          Zyence <span className="label-caps text-muted-foreground">Studio</span>
         </Link>
         <nav className="flex flex-1 flex-col gap-0.5 p-2">
           {links
