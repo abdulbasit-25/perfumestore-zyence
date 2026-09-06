@@ -47,7 +47,7 @@ function NewsletterForm() {
 
 /* ── Data ───────────────────────────────────────── */
 const socials = [
-  { href: "mailto:hello@sorrelgoods.com", label: "Email us", Icon: Mail },
+  { href: "mailto:hello@zyence.com", label: "Email us", Icon: Mail },
   { href: "https://instagram.com", label: "Follow us on Instagram", Icon: Instagram },
 ] as const;
 
@@ -55,9 +55,11 @@ const columns = [
   {
     heading: "Shop",
     links: [
-      { label: "All goods", to: "/shop" },
-      { label: "Textiles", to: "/shop", search: { category: "textiles" } },
-      { label: "Objects", to: "/shop", search: { category: "objects" } },
+      { label: "All scents", to: "/shop" },
+      { label: "Eau de Parfum", to: "/shop", search: { category: "eau-de-parfum" } },
+      { label: "Attars / Oils", to: "/shop", search: { category: "attars-oils" } },
+      { label: "Home Fragrance", to: "/shop", search: { category: "home-fragrance" } },
+      { label: "Gift Sets", to: "/shop", search: { category: "gift-sets" } },
     ],
   },
   {
@@ -91,12 +93,12 @@ export function SiteFooter() {
       {/* ── Brand + newsletter ─────────────────── */}
       <div className="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 md:grid-cols-12 md:px-10 md:py-20">
         <div className="md:col-span-5">
-          <p className="label-caps mb-5 text-muted-foreground">Est. 2026 — Atelier goods</p>
+          <p className="label-caps mb-5 text-muted-foreground">Est. 2026 — Fine fragrance</p>
           <p className="font-display text-5xl leading-none tracking-tight md:text-6xl">
-            Sorrel<span className="text-olive">.</span>
+            Zyence<span className="text-olive">.</span>
           </p>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Slow-made apparel, ceramics and objects. Shipped from the atelier, paid on delivery.
+            Fine fragrance, composed with precision. Shipped with care, paid on delivery.
           </p>
           <div className="mt-7 flex items-center gap-3">
             {socials.map(({ href, label, Icon }) => (
@@ -117,7 +119,7 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-6 md:col-start-7 md:self-end">
-          <p className="label-caps mb-4 text-muted-foreground">First word on new pieces</p>
+          <p className="label-caps mb-4 text-muted-foreground">First access to new scents</p>
           <NewsletterForm />
           <p className="mt-3 text-xs text-muted-foreground">
             One email per collection. No noise, unsubscribe anytime.
@@ -183,14 +185,14 @@ export function SiteFooter() {
       {/* ── Giant cropped wordmark ─────────────── */}
       <div aria-hidden className="pointer-events-none select-none overflow-hidden">
         <p className="mx-auto -mb-[0.18em] text-center font-display text-[clamp(5rem,17vw,17rem)] leading-[0.8] tracking-tight text-foreground/[0.05]">
-          Sorrel
+          Zyence
         </p>
       </div>
 
       {/* ── Bottom bar ─────────────────────────── */}
       <div className="rule-top relative bg-surface">
         <div className="mx-auto flex max-w-[1500px] flex-col gap-3 px-5 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between md:px-10">
-          <span>© 2026 Sorrel Goods</span>
+          <span>© 2026 Zyence</span>
           <span className="flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-olive" aria-hidden />
             Cash on delivery
