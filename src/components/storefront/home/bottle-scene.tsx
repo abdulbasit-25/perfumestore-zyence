@@ -78,11 +78,7 @@ function BottleModel({ prefersReducedMotion }: { prefersReducedMotion: boolean }
       {/* Cap */}
       <mesh position={[0, 1.55, 0]}>
         <cylinderGeometry args={[0.16, 0.12, 0.3, 16]} />
-        <meshStandardMaterial 
-          color="#D4A574"
-          metalness={0.8}
-          roughness={0.2}
-        />
+        <meshStandardMaterial color="#D4A574" metalness={0.8} roughness={0.2} />
       </mesh>
 
       {/* Liquid inside bottle - with amber color */}
@@ -137,7 +133,7 @@ export function BottleScene() {
 
   useEffect(() => {
     setMounted(true);
-    
+
     // Check WebGL support
     const canvas = document.createElement("canvas");
     const gl = canvas.getContext("webgl") || canvas.getContext("webgl2");
