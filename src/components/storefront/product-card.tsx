@@ -70,7 +70,9 @@ export function ProductCard({
 
           {/* Stock badges */}
           {outOfStock && (
-            <span className="label-caps absolute top-3 left-3 bg-background px-2 py-1 font-mono text-xs">Sold out</span>
+            <span className="label-caps absolute top-3 left-3 bg-background px-2 py-1 font-mono text-xs">
+              Sold out
+            </span>
           )}
           {!outOfStock && product.stock <= 5 && (
             <span className="label-caps absolute top-3 left-3 bg-amber-700 px-2 py-1 text-amber-50 font-mono text-xs">
@@ -124,13 +126,19 @@ export function ProductCard({
           >
             <div className="text-center space-y-1 text-white">
               {product.scent?.top && (
-                <p className="text-xs font-mono uppercase tracking-widest opacity-90">Top: {product.scent.top}</p>
+                <p className="text-xs font-mono uppercase tracking-widest opacity-90">
+                  Top: {product.scent.top}
+                </p>
               )}
               {product.scent?.heart && (
-                <p className="text-xs font-mono uppercase tracking-widest opacity-80">Heart: {product.scent.heart}</p>
+                <p className="text-xs font-mono uppercase tracking-widest opacity-80">
+                  Heart: {product.scent.heart}
+                </p>
               )}
               {product.scent?.base && (
-                <p className="text-xs font-mono uppercase tracking-widest opacity-70">Base: {product.scent.base}</p>
+                <p className="text-xs font-mono uppercase tracking-widest opacity-70">
+                  Base: {product.scent.base}
+                </p>
               )}
             </div>
           </motion.div>
