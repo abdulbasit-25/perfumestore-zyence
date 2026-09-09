@@ -44,7 +44,8 @@ export function HeroSection() {
               to the decimal.
             </h1>
             <p className="mt-6 max-w-sm text-base text-muted-foreground md:mt-8">
-              Small-batch eau de parfum, attars, and home scents—each accord weighed and re-tested on skin before it ships. Inspect before you pay.
+              Small-batch eau de parfum, attars, and home scents—each accord weighed and re-tested
+              on skin before it ships. Inspect before you pay.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4 md:mt-10">
               <MagneticButton
@@ -55,7 +56,10 @@ export function HeroSection() {
                 Explore collection
                 <ArrowUpRight className="h-3.5 w-3.5 -translate-x-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
               </MagneticButton>
-              <Link to="/about" className="label-caps link-underline text-muted-foreground font-mono text-sm">
+              <Link
+                to="/about"
+                className="label-caps link-underline text-muted-foreground font-mono text-sm"
+              >
                 About studio
               </Link>
             </div>
@@ -67,8 +71,12 @@ export function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <p className="font-mono text-xs text-muted-foreground tracking-wider">BATCH 2026-001</p>
-              <p className="font-mono text-xs text-muted-foreground">22% concentration • 72h maceration</p>
+              <p className="font-mono text-xs text-muted-foreground tracking-wider">
+                BATCH 2026-001
+              </p>
+              <p className="font-mono text-xs text-muted-foreground">
+                22% concentration • 72h maceration
+              </p>
             </motion.div>
           </motion.div>
 
