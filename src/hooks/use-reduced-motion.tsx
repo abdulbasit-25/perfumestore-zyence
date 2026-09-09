@@ -38,7 +38,7 @@ export function getAnimationDuration(duration: number, prefersReducedMotion: boo
 export function getAnimationVariant(
   reducedVariant: any,
   normalVariant: any,
-  prefersReducedMotion: boolean
+  prefersReducedMotion: boolean,
 ) {
   return prefersReducedMotion ? reducedVariant : normalVariant;
 }
