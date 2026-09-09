@@ -59,7 +59,9 @@ export function ProcessSection() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <p className="label-caps text-amber-700 font-mono text-xs tracking-wider">Manufacturing Process</p>
+        <p className="label-caps text-amber-700 font-mono text-xs tracking-wider">
+          Manufacturing Process
+        </p>
         <h2 className="font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl text-foreground mt-2">
           How it&apos;s Made
         </h2>
@@ -91,7 +93,9 @@ export function ProcessSection() {
             >
               {/* Step number and icon header */}
               <div className="flex items-start justify-between mb-6">
-                <span className="font-mono text-2xl font-semibold text-amber-700 tracking-wider">{step}</span>
+                <span className="font-mono text-2xl font-semibold text-amber-700 tracking-wider">
+                  {step}
+                </span>
                 <motion.div
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-amber-700/20 text-amber-700 transition-colors duration-300 group-hover:bg-amber-700/10"
                   whileHover={{ scale: 1.1 }}
