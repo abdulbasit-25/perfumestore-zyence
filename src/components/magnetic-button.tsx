@@ -38,17 +38,17 @@ export function MagneticButton({
       const rect = containerRef.current.getBoundingClientRect();
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      
+
       const mouseX = e.clientX - rect.left;
       const mouseY = e.clientY - rect.top;
-      
+
       const distX = mouseX - centerX;
       const distY = mouseY - centerY;
-      
+
       // Limit movement to 30% of container size
       const maxDist = Math.min(rect.width, rect.height) * 0.15;
       const distance = Math.sqrt(distX * distX + distY * distY);
-      
+
       if (distance < maxDist) {
         setPosition({
           x: (distX / maxDist) * 8,
