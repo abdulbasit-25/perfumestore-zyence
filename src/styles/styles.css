@@ -2,6 +2,9 @@
 @source "../../src";
 @import "tw-animate-css";
 
+/* Zyence Brand Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 /*
@@ -16,8 +19,10 @@
 :root {
   color-scheme: light;
 
-  --font-family-display: "Space Grotesk", "Neue Haas Grotesk Display", Helvetica, Arial, sans-serif;
+  /* Zyence Typography System */
+  --font-family-display: "Fraunces", "Canela", ui-serif, serif;
   --font-family-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: "JetBrains Mono", "Söhne Mono", ui-monospace, monospace;
   --font-size-label: 0.6875rem;
   --font-size-caption: 0.8rem;
   --font-size-body: 1rem;
@@ -25,8 +30,9 @@
   --font-weight-medium: 550;
   --font-weight-semibold: 700;
 
-  --radius: 2px;
-  --radius-card: 3px;
+  /* Zyence Spacing & Layout */
+  --radius: 0px;
+  --radius-card: 2px;
   --container-shell: 1500px;
   --content-gutter: clamp(1.1rem, 4vw, 2.5rem);
   --space-section: 6rem;
@@ -38,102 +44,106 @@
   --transition-theme: 350ms ease;
   --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
 
-  --shadow-soft: 0 16px 40px -28px rgb(10 11 16 / 32%);
-  --shadow-card: 0 14px 30px -26px rgb(10 11 16 / 26%);
-  --shadow-card-hover: 0 18px 34px -22px rgb(10 11 16 / 30%), 0 0 0 1px oklch(0.5 0.16 280 / 28%);
-  --shadow-panel: 0 25px 60px -32px rgb(10 11 16 / 30%);
-  --shadow-floating: 0 20px 48px -20px rgb(10 11 16 / 32%);
-  --shadow-media: 0 24px 60px -30px rgb(10 11 16 / 26%);
-  --shadow-chat-trigger: 0 12px 32px rgb(10 11 16 / 16%);
-  --shadow-chat-panel: 0 25px 80px rgb(10 11 16 / 20%);
+  /* Zyence Shadows (warmer, less blue) */
+  --shadow-soft: 0 16px 40px -28px rgb(14 13 12 / 24%);
+  --shadow-card: 0 14px 30px -26px rgb(14 13 12 / 18%);
+  --shadow-card-hover: 0 18px 34px -22px rgb(14 13 12 / 22%), 0 0 0 1px rgb(180 118 59 / 20%);
+  --shadow-panel: 0 25px 60px -32px rgb(14 13 12 / 20%);
+  --shadow-floating: 0 20px 48px -20px rgb(14 13 12 / 22%);
+  --shadow-media: 0 24px 60px -30px rgb(14 13 12 / 18%);
+  --shadow-chat-trigger: 0 12px 32px rgb(14 13 12 / 12%);
+  --shadow-chat-panel: 0 25px 80px rgb(14 13 12 / 16%);
 
-  --background: oklch(0.965 0.004 90);
-  --foreground: oklch(0.16 0.015 280);
-  --surface: oklch(0.99 0.003 90);
-  --surface-2: oklch(0.92 0.006 90);
-  --card: oklch(0.99 0.003 90);
-  --card-foreground: oklch(0.16 0.015 280);
-  --popover: oklch(0.99 0.003 90);
-  --popover-foreground: oklch(0.16 0.015 280);
-  --primary: oklch(0.16 0.015 280);
-  --primary-foreground: oklch(0.98 0.004 90);
-  --secondary: oklch(0.9 0.02 65);
-  --secondary-foreground: oklch(0.28 0.05 60);
-  --muted: oklch(0.92 0.006 90);
-  --muted-foreground: oklch(0.46 0.01 270);
-  --accent: oklch(0.5 0.16 280);
-  --accent-foreground: oklch(0.98 0.004 90);
-  --olive: oklch(0.42 0.07 165);
-  --olive-soft: oklch(0.86 0.03 165);
-  --clay: oklch(0.55 0.12 55);
-  --success: oklch(0.48 0.11 155);
-  --success-foreground: oklch(0.98 0.004 90);
-  --warning: oklch(0.7 0.13 82);
-  --warning-foreground: oklch(0.18 0.02 280);
-  --destructive: oklch(0.5 0.18 25);
-  --destructive-foreground: oklch(0.98 0.004 90);
-  --border: oklch(0.86 0.008 90);
-  --hairline: oklch(0.82 0.01 90);
-  --input: oklch(0.86 0.008 90);
-  --ring: oklch(0.5 0.16 280);
+  /* Zyence Color Palette */
+  /* Near-black base with warm cream highlights and amber accents */
+  --background: #FAF8F3;
+  --foreground: #0E0D0C;
+  --surface: #FFFFFF;
+  --surface-2: #F4EFE7;
+  --card: #FFFFFF;
+  --card-foreground: #0E0D0C;
+  --popover: #FFFFFF;
+  --popover-foreground: #0E0D0C;
+  --primary: #0E0D0C;
+  --primary-foreground: #F4EFE7;
+  --secondary: #D4C5B0;
+  --secondary-foreground: #0E0D0C;
+  --muted: #E8DFD1;
+  --muted-foreground: #7A6F62;
+  --accent: #B4763B;
+  --accent-foreground: #F4EFE7;
+  --olive: #5C5349;
+  --olive-soft: #D4C5B0;
+  --clay: #8B6F47;
+  --success: #6B9C6B;
+  --success-foreground: #FFFFFF;
+  --warning: #D4A574;
+  --warning-foreground: #0E0D0C;
+  --destructive: #A04040;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8DFD1;
+  --hairline: #D4C5B0;
+  --input: #E8DFD1;
+  --ring: #B4763B;
   --chart-1: var(--accent);
-  --chart-2: var(--olive);
-  --chart-3: oklch(0.3 0.02 280);
-  --chart-4: oklch(0.6 0.1 165);
-  --chart-5: oklch(0.62 0.08 65);
-  --sidebar: oklch(0.99 0.003 90);
-  --sidebar-foreground: oklch(0.16 0.015 280);
+  --chart-2: var(--clay);
+  --chart-3: #5C5349;
+  --chart-4: #8B6F47;
+  --chart-5: #A4876B;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0E0D0C;
   --sidebar-primary: var(--accent);
-  --sidebar-primary-foreground: oklch(0.98 0.004 90);
-  --sidebar-accent: oklch(0.92 0.006 90);
-  --sidebar-accent-foreground: oklch(0.16 0.015 280);
-  --sidebar-border: oklch(0.86 0.008 90);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F4EFE7;
+  --sidebar-accent-foreground: #0E0D0C;
+  --sidebar-border: #E8DFD1;
   --sidebar-ring: var(--accent);
 }
 
 .dark {
   color-scheme: dark;
-  --background: oklch(0.13 0.015 280);
-  --foreground: oklch(0.95 0.01 270);
-  --surface: oklch(0.17 0.018 280);
-  --surface-2: oklch(0.22 0.02 278);
-  --card: oklch(0.17 0.018 280);
-  --card-foreground: oklch(0.95 0.01 270);
-  --popover: oklch(0.19 0.02 280);
-  --popover-foreground: oklch(0.95 0.01 270);
-  --primary: oklch(0.95 0.01 270);
-  --primary-foreground: oklch(0.13 0.015 280);
-  --secondary: oklch(0.32 0.05 65);
-  --secondary-foreground: oklch(0.95 0.01 270);
-  --muted: oklch(0.22 0.02 278);
-  --muted-foreground: oklch(0.68 0.02 270);
-  --accent: oklch(0.72 0.16 280);
-  --accent-foreground: oklch(0.13 0.015 280);
-  --olive: oklch(0.55 0.08 165);
-  --olive-soft: oklch(0.28 0.05 165);
-  --clay: oklch(0.68 0.13 55);
-  --success: oklch(0.62 0.13 155);
-  --success-foreground: oklch(0.13 0.015 280);
-  --warning: oklch(0.78 0.14 85);
-  --warning-foreground: oklch(0.16 0.02 280);
-  --destructive: oklch(0.62 0.19 25);
-  --destructive-foreground: oklch(0.97 0.01 270);
-  --border: oklch(1 0 0 / 12%);
-  --hairline: oklch(1 0 0 / 16%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.72 0.16 280);
+  /* Zyence dark mode: deep near-black with warm highlights */
+  --background: #1A1915;
+  --foreground: #F4EFE7;
+  --surface: #242018;
+  --surface-2: #2E2822;
+  --card: #242018;
+  --card-foreground: #F4EFE7;
+  --popover: #2E2822;
+  --popover-foreground: #F4EFE7;
+  --primary: #F4EFE7;
+  --primary-foreground: #0E0D0C;
+  --secondary: #5C5349;
+  --secondary-foreground: #F4EFE7;
+  --muted: #3D3730;
+  --muted-foreground: #A4876B;
+  --accent: #D4A574;
+  --accent-foreground: #0E0D0C;
+  --olive: #8B7A6B;
+  --olive-soft: #3D3730;
+  --clay: #B8936B;
+  --success: #7FAA7F;
+  --success-foreground: #0E0D0C;
+  --warning: #D4B896;
+  --warning-foreground: #0E0D0C;
+  --destructive: #C86B6B;
+  --destructive-foreground: #0E0D0C;
+  --border: #3D3730;
+  --hairline: #4A4038;
+  --input: #4A4038;
+  --ring: #D4A574;
   --chart-1: var(--accent);
-  --chart-2: var(--olive);
-  --chart-3: oklch(0.88 0.01 270);
-  --chart-4: oklch(0.42 0.07 165);
-  --chart-5: oklch(0.5 0.06 65);
-  --sidebar: oklch(0.15 0.017 280);
-  --sidebar-foreground: oklch(0.95 0.01 270);
+  --chart-2: #8B7A6B;
+  --chart-3: #A4876B;
+  --chart-4: #7A6F62;
+  --chart-5: #5C5349;
+  --sidebar: #1F1B17;
+  --sidebar-foreground: #F4EFE7;
   --sidebar-primary: var(--accent);
-  --sidebar-primary-foreground: oklch(0.13 0.015 280);
-  --sidebar-accent: oklch(0.22 0.02 278);
-  --sidebar-accent-foreground: oklch(0.95 0.01 270);
-  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-primary-foreground: #0E0D0C;
+  --sidebar-accent: #2E2822;
+  --sidebar-accent-foreground: #F4EFE7;
+  --sidebar-border: #3D3730;
   --sidebar-ring: var(--accent);
 }
 
@@ -202,6 +212,10 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    /* Hide default cursor for custom cursor on desktop */
+    @media (pointer: fine) {
+      cursor: none;
+    }
   }
   body {
     background-color: var(--color-background);
@@ -253,10 +267,11 @@
   text-transform: uppercase;
 }
 @utility display-xl {
-  font-family: var(--font-display);
+  font-family: var(--font-family-display);
   font-size: clamp(2.75rem, 8vw, 6.5rem);
   letter-spacing: -0.01em;
   line-height: 0.94;
+  font-weight: 600;
 }
 
 /* 4. Layout */
@@ -459,6 +474,60 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Zyence Brand Utilities */
+@utility font-mono {
+  font-family: var(--font-family-mono);
+}
+@utility font-serif {
+  font-family: var(--font-family-display);
+}
+
+/* Grain overlay for texture */
+@layer components {
+  .grain-overlay {
+    position: relative;
+  }
+  .grain-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' seed='2'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+  }
+}
+
+/* Dark grain overlay */
+.dark .grain-overlay::before {
+  opacity: 0.05;
+}
+
+/* Magnetic button container */
+@layer components {
+  .magnetic-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .magnetic-button {
+    transition: transform var(--transition-normal) ease-out;
+  }
+}
+
+/* Scroll animations */
+@utility rise-on-scroll {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: rise-fade 0.6s ease-out both;
+}
+
+@keyframes rise-fade {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 

@@ -9,6 +9,7 @@ import { MarqueeTicker } from "@/components/storefront/home/marquee-ticker";
 import { CollectionsSection } from "@/components/storefront/home/collections-section";
 import { ProcessSection } from "@/components/storefront/home/process-section";
 import { FeaturedProductsSection } from "@/components/storefront/home/featured-products-section";
+import { IngredientSourcingSection } from "@/components/storefront/home/ingredient-sourcing-section";
 import { EditorialBanner } from "@/components/storefront/home/editorial-banner";
 import { TrustBadges } from "@/components/storefront/home/trust-badges";
 import { BestSellersSection } from "@/components/storefront/home/best-sellers-section";
@@ -109,6 +110,9 @@ function Home() {
       ) : (
         <FeaturedProductsSection products={featured} />
       )}
+
+      {/* Ingredient Sourcing - Transparency Section */}
+      <IngredientSourcingSection />
 
       {/* Trust */}
       <TrustBadges />
