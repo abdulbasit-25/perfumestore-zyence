@@ -1,8 +1,7 @@
+import heroImage from "@/assets/hero.jpg";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Suspense } from "react";
-import { BottleScene } from "./bottle-scene";
 import { MagneticButton } from "@/components/magnetic-button";
 
 const EYEBROW = "Precision Perfumery";
@@ -80,7 +79,7 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right 3D bottle column */}
+          {/* Right image column */}
           <motion.div
             className="relative md:col-span-7"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -91,19 +90,14 @@ export function HeroSection() {
               aria-hidden
               className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-sm border border-amber-900/20 md:block"
             />
-            <div className="relative overflow-hidden rounded-sm border border-border/70 bg-surface shadow-[var(--shadow-media)] aspect-[4/3] md:aspect-[5/6]">
-              <Suspense
-                fallback={
-                  <div className="w-full h-full bg-gradient-to-b from-stone-100 to-stone-50 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-28 mx-auto mb-3 bg-gradient-to-b from-amber-50 to-amber-100 rounded-sm border border-stone-300" />
-                      <p className="text-xs text-stone-500 font-mono">Loading</p>
-                    </div>
-                  </div>
-                }
-              >
-                <BottleScene />
-              </Suspense>
+            <div className="media-zoom relative overflow-hidden rounded-sm border border-border/70 bg-surface shadow-[var(--shadow-media)]">
+              <img
+                src={heroImage}
+                alt="Zyence fragrance collection: luxury eau de parfum bottles in dark glass with gold accents"
+                width={1920}
+                height={1200}
+                className="aspect-[4/3] w-full rounded-sm object-cover md:aspect-[5/6]"
+              />
             </div>
           </motion.div>
         </div>
